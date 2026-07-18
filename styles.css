@@ -580,6 +580,19 @@ a.contact-card:hover { box-shadow: 0 10px 24px rgba(23, 16, 64, .08); color: var
 }
 .contact__form button:hover { background: var(--indigo-dark); }
 
+/* ---------- Form status messages ---------- */
+.form-status {
+  margin: 12px 0 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--red);
+  min-height: 1em;
+}
+.form-status--ok { color: var(--green); }
+.form-status--ondark { color: #FFD9D6; }
+.form-status--ondark:empty { display: none; }
+.form-status:empty { margin: 0; min-height: 0; }
+
 /* ---------- Footer ---------- */
 .footer { background: var(--ink); color: #ffffff; padding: 64px 0 0; }
 .footer__grid {

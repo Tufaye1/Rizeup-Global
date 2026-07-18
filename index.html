@@ -352,8 +352,10 @@
       <h2>Get Your Free Study-Abroad Roadmap.</h2>
       <p>Six free handbooks. Pick one and we'll send the PDF.</p>
     </div>
-    <form class="lead__form" id="lead-form">
-      <select id="lead-pdf" aria-label="Choose a handbook">
+    <form class="lead__form" id="lead-form" action="https://formspree.io/f/xbdbbnzb" method="POST">
+      <input type="hidden" name="_subject" value="Handbook PDF request — RizeUp Global">
+      <input type="hidden" name="form" value="Handbook request">
+      <select id="lead-pdf" name="handbook" aria-label="Choose a handbook">
         <option>Study-Abroad Roadmap</option>
         <option>SOP Handbook</option>
         <option>Visa Prep Kit</option>
@@ -362,9 +364,10 @@
         <option>Pre-Departure Checklist</option>
       </select>
       <div class="lead__row">
-        <input type="email" id="lead-email" placeholder="Enter your email" aria-label="Email address">
+        <input type="email" id="lead-email" name="email" placeholder="Enter your email" required aria-label="Email address">
         <button type="submit" id="lead-send">Send Me the PDF →</button>
       </div>
+      <p class="form-status form-status--ondark" id="lead-status" role="status"></p>
     </form>
   </div>
 </section>
@@ -458,12 +461,13 @@
             <div class="contact-card__meta">+60 17-885 3621</div>
           </div>
         </a>
-        <a href="mailto:rizeupglobal@gmail.com" class="contact-card">
+        <a href="mailto:contact@rizeupglobal.com" class="contact-card">
           <span class="contact-card__icon icon-chip--indigo">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5B4FE9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M2 7L12 13L22 7"/></svg>
           </span>
           <div>
             <div class="contact-card__title">Email</div>
+            <div class="contact-card__meta">contact@rizeupglobal.com</div>
             <div class="contact-card__meta">rizeupglobal@gmail.com</div>
           </div>
         </a>
@@ -473,7 +477,7 @@
           </span>
           <div>
             <div class="contact-card__title">Address 1 · Bangladesh</div>
-            <div class="contact-card__meta">Chattogram, Bangladesh</div>
+            <div class="contact-card__meta">Hazera-Taju College,<br>Old Chandgaon,<br>Chattogram 4212, Bangladesh</div>
           </div>
         </div>
         <div class="contact-card contact-card--top">
@@ -482,25 +486,28 @@
           </span>
           <div>
             <div class="contact-card__title">Address 2 · Malaysia</div>
-            <div class="contact-card__meta">Shah Alam, Selangor, Malaysia</div>
+            <div class="contact-card__meta">B-12-07, Utropolis Glenmarie,<br>U1/14 Jalan Kontraktor,<br>40150 Shah Alam, Selangor,<br>Malaysia</div>
           </div>
         </div>
       </div>
-      <form class="contact__form" id="contact-form">
+      <form class="contact__form" id="contact-form" action="https://formspree.io/f/xbdbbnzb" method="POST">
+        <input type="hidden" name="_subject" value="New free-consult request — RizeUp Global">
+        <input type="hidden" name="form" value="Consult request">
         <div class="contact__form-row">
-          <input type="text" placeholder="Your name" aria-label="Your name">
-          <input type="tel" placeholder="Phone / WhatsApp" aria-label="Phone or WhatsApp number">
+          <input type="text" name="name" placeholder="Your name" required aria-label="Your name">
+          <input type="tel" name="phone" placeholder="Phone / WhatsApp" required aria-label="Phone or WhatsApp number">
         </div>
-        <select aria-label="Where do you want to study?">
-          <option>Where do you want to study?</option>
+        <select name="destination" aria-label="Where do you want to study?">
+          <option value="">Where do you want to study?</option>
           <option>Malaysia</option>
           <option>Australia</option>
           <option>USA</option>
           <option>Europe</option>
           <option>Not sure yet</option>
         </select>
-        <textarea placeholder="Tell us about yourself: HSC results, budget, dream program" rows="4" aria-label="Tell us about yourself"></textarea>
+        <textarea name="message" placeholder="Tell us about yourself: HSC results, budget, dream program" rows="4" aria-label="Tell us about yourself"></textarea>
         <button type="submit">Book My Free Consult →</button>
+        <p class="form-status" id="contact-status" role="status"></p>
       </form>
     </div>
   </div>
@@ -513,11 +520,15 @@
       <div class="footer__logo">RizeUp <em>Global</em></div>
       <p class="footer__about">Helping Bangladeshi students find their way to global degrees. Based in Chattogram. Trusted across four countries.</p>
       <div class="footer__social">
-        <a href="https://facebook.com" aria-label="Facebook">f</a>
+        <a href="https://facebook.com" aria-label="Facebook">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="#ffffff"><path d="M18 2H15A5 5 0 0 0 10 7V10H7V14H10V22H14V14H17L18 10H14V7A1 1 0 0 1 15 6H18Z"/></svg>
+        </a>
         <a href="https://instagram.com" aria-label="Instagram">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ffffff"/></svg>
         </a>
-        <a href="https://tiktok.com" aria-label="TikTok" style="font-size:13px">TT</a>
+        <a href="https://tiktok.com" aria-label="TikTok">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="#ffffff"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+        </a>
       </div>
     </div>
     <div>
@@ -545,9 +556,10 @@
       <div class="footer__links">
         <a href="https://wa.me/8801612497157">+880 1612-497157 (WhatsApp BD)</a>
         <a href="https://wa.me/60178853621">+60 17-885 3621 (WhatsApp MY)</a>
+        <a href="mailto:contact@rizeupglobal.com">contact@rizeupglobal.com</a>
         <a href="mailto:rizeupglobal@gmail.com">rizeupglobal@gmail.com</a>
-        <span>Chattogram office · Bangladesh</span>
-        <span>Shah Alam office · Malaysia</span>
+        <span>Hazera-Taju College, Old Chandgaon,<br>Chattogram 4212, Bangladesh</span>
+        <span>B-12-07, Utropolis Glenmarie, U1/14 Jalan Kontraktor,<br>40150 Shah Alam, Selangor, Malaysia</span>
       </div>
     </div>
   </div>

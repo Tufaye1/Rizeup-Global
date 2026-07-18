@@ -69,22 +69,64 @@ document.querySelectorAll('.faq-item__q').forEach((btn) => {
   });
 });
 
+// ---------- Formspree submission ----------
+async function submitToFormspree(form, statusEl) {
+  const res = await fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { Accept: 'application/json' },
+  });
+  if (res.ok) return true;
+  const data = await res.json().catch(() => ({}));
+  statusEl.textContent = data.errors
+    ? data.errors.map((err) => err.message).join(', ')
+    : 'Something went wrong. Please try again, or message us on WhatsApp.';
+  return false;
+}
+
 // ---------- Lead magnet ----------
 const leadForm = document.getElementById('lead-form');
 const leadSend = document.getElementById('lead-send');
-leadForm.addEventListener('submit', (e) => {
+const leadStatus = document.getElementById('lead-status');
+leadForm.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const email = document.getElementById('lead-email');
-  if (!email.value || !email.checkValidity()) { email.reportValidity(); return; }
-  leadSend.textContent = 'Sent ✓';
+  leadStatus.textContent = '';
+  leadSend.disabled = true;
+  leadSend.textContent = 'Sending…';
+  const ok = await submitToFormspree(leadForm, leadStatus).catch(() => false);
+  leadSend.disabled = false;
+  if (ok) {
+    leadSend.textContent = 'Sent ✓';
+    leadStatus.textContent = 'Check your inbox soon — your handbook is on its way.';
+  } else {
+    leadSend.textContent = 'Send Me the PDF →';
+    leadStatus.textContent = leadStatus.textContent || 'Could not send. Please try again.';
+  }
 });
 document.getElementById('lead-pdf').addEventListener('change', () => {
   leadSend.textContent = 'Send Me the PDF →';
+  leadStatus.textContent = '';
 });
 
 // ---------- Contact form ----------
-document.getElementById('contact-form').addEventListener('submit', function (e) {
+const contactForm = document.getElementById('contact-form');
+const contactStatus = document.getElementById('contact-status');
+contactForm.addEventListener('submit', async function (e) {
   e.preventDefault();
-  const btn = this.querySelector('button');
-  btn.textContent = 'Request Sent ✓ We\'ll reach out shortly';
+  const btn = this.querySelector('button[type="submit"]');
+  contactStatus.textContent = '';
+  contactStatus.classList.remove('form-status--ok');
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+  const ok = await submitToFormspree(this, contactStatus).catch(() => false);
+  btn.disabled = false;
+  if (ok) {
+    btn.textContent = 'Request Sent ✓';
+    contactStatus.classList.add('form-status--ok');
+    contactStatus.textContent = "Thanks! A counselor will reach out on WhatsApp within one working day.";
+    this.reset();
+  } else {
+    btn.textContent = 'Book My Free Consult →';
+    contactStatus.textContent = contactStatus.textContent || 'Could not send. Please try again.';
+  }
 });
