@@ -10,6 +10,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
 <body>
 
@@ -17,13 +20,13 @@
 <nav class="navbar">
   <div class="navbar__inner">
     <a href="#top" class="navbar__logo">
-      <span class="navbar__logo-mark">R</span>
+      <img src="navbar-logo.png" alt="" class="navbar__logo-img">
       RizeUp&nbsp;<em>Global</em>
     </a>
     <div class="navbar__links">
       <a href="#services">Services</a>
       <a href="#destinations">Destinations</a>
-      <a href="#resources">Resources</a>
+      <a href="resources.html">Resources</a>
       <a href="#faq">FAQ</a>
     </div>
     <a href="#contact" class="navbar__cta">Free Consult</a>
@@ -340,36 +343,22 @@
     <p class="testimonials__quote" id="t-quote">"RizeUp handled my whole application timeline. I just showed up to interviews. They prepared every document."</p>
     <div class="testimonials__name" id="t-name">Ayesha R.</div>
     <div class="testimonials__role" id="t-role">University of Malaya · Computer Science</div>
-    <div class="testimonials__note">Illustrative quotes, to be replaced with real student stories before launch</div>
   </div>
 </section>
 
-<!-- LEAD MAGNET BANNER -->
+<!-- RESOURCES CTA -->
 <section id="resources" class="lead">
   <div class="lead__banner">
     <span class="blob blob--yellow"></span>
     <span class="blob blob--purple"></span>
     <div class="lead__copy">
-      <h2>Get Your Free Study-Abroad Roadmap.</h2>
-      <p>Six free handbooks. Pick one and we'll send the PDF.</p>
+      <h2>Free Study-Abroad Resources.</h2>
+      <p>Guides, checklists and handbooks for every step — from shortlisting universities to landing on campus. Read our articles, or drop your email and we'll send the full PDF pack to your inbox.</p>
     </div>
-    <form class="lead__form" id="lead-form" action="https://formspree.io/f/xbdbbnzb" method="POST">
-      <input type="hidden" name="_subject" value="Handbook PDF request — RizeUp Global">
-      <input type="hidden" name="form" value="Handbook request">
-      <select id="lead-pdf" name="handbook" aria-label="Choose a handbook">
-        <option>Study-Abroad Roadmap</option>
-        <option>SOP Handbook</option>
-        <option>Visa Prep Kit</option>
-        <option>Scholarship Finder</option>
-        <option>Shortlist Worksheet</option>
-        <option>Pre-Departure Checklist</option>
-      </select>
-      <div class="lead__row">
-        <input type="email" id="lead-email" name="email" placeholder="Enter your email" required aria-label="Email address">
-        <button type="submit" id="lead-send">Send Me the PDF →</button>
-      </div>
-      <p class="form-status form-status--ondark" id="lead-status" role="status"></p>
-    </form>
+    <div class="lead__cta">
+      <a href="resources.html" class="lead__btn">Browse Resources →</a>
+      <span class="lead__note">Articles &amp; free downloadable PDFs</span>
+    </div>
   </div>
 </section>
 

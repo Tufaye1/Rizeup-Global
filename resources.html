@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Study-Abroad Resources — RizeUp Global</title>
+<meta name="description" content="Free study-abroad guides, checklists and handbooks for Bangladeshi students — roadmap, SOP, visa prep, scholarships and more. Drop your email and we'll send the PDF pack.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="resources.css">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar__inner">
+    <a href="index.html#top" class="navbar__logo">
+      <img src="navbar-logo.png" alt="" class="navbar__logo-img">
+      RizeUp&nbsp;<em>Global</em>
+    </a>
+    <div class="navbar__links">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#destinations">Destinations</a>
+      <a href="resources.html">Resources</a>
+      <a href="index.html#faq">FAQ</a>
+    </div>
+    <a href="index.html#contact" class="navbar__cta">Free Consult</a>
+  </div>
+</nav>
+
+<!-- HERO + EMAIL CAPTURE -->
+<header class="res-hero">
+  <div class="res-hero__inner">
+    <a href="index.html" class="res-hero__back">← Back to home</a>
+    <span class="res-hero__eyebrow">Free resources</span>
+    <h1>Everything you need, <em>in your inbox.</em></h1>
+    <p class="res-hero__lede">Guides, checklists and handbooks for every step of studying abroad — from shortlisting universities to your first week on campus. Drop your email and we'll send the full PDF pack.</p>
+    <form class="res-form" id="res-form" action="https://formspree.io/f/xbdbbnzb" method="POST">
+      <input type="hidden" name="_subject" value="Resource request — RizeUp Global">
+      <input type="hidden" name="resource" id="res-resource" value="Full resource pack">
+      <input type="email" name="email" placeholder="Enter your email" required aria-label="Your email address">
+      <button type="submit" id="res-submit">Email me the pack →</button>
+    </form>
+    <p class="res-hero__status" id="res-status" role="status"></p>
+    <p class="res-hero__fineprint">Free — the PDF pack lands straight in your inbox. No spam, unsubscribe anytime.</p>
+  </div>
+</header>
+
+<!-- RESOURCE / ARTICLE CARDS -->
+<section class="res-section">
+  <div class="res-section__head">
+    <h2>Guides &amp; <em>Handbooks</em></h2>
+    <p>Pick what you need. Hit “Get the PDF”, add your email, and we'll send it over — every guide is free.</p>
+  </div>
+  <div class="res-grid">
+    <article class="res-card">
+      <span class="res-card__icon icon-chip--indigo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5B4FE9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2V6Z"/><path d="M9 4v14"/><path d="M15 6v14"/></svg>
+      </span>
+      <span class="res-card__tag">Guide</span>
+      <h3 class="res-card__title">Study-Abroad Roadmap</h3>
+      <p class="res-card__desc">Your month-by-month plan from first thought to boarding the plane — so you never miss a deadline.</p>
+      <button type="button" class="res-card__btn" data-resource="Study-Abroad Roadmap">Get the PDF →</button>
+    </article>
+
+    <article class="res-card">
+      <span class="res-card__icon icon-chip--yellow">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C79418" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6C4.9 2 4 2.9 4 4v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6Z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h5"/></svg>
+      </span>
+      <span class="res-card__tag">Writing</span>
+      <h3 class="res-card__title">SOP Handbook</h3>
+      <p class="res-card__desc">Templates, real examples and line-by-line tips to write a statement of purpose that stands out.</p>
+      <button type="button" class="res-card__btn" data-resource="SOP Handbook">Get the PDF →</button>
+    </article>
+
+    <article class="res-card">
+      <span class="res-card__icon icon-chip--red">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8544D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="9" r="3"/><path d="M8 16h8"/></svg>
+      </span>
+      <span class="res-card__tag">Checklist</span>
+      <h3 class="res-card__title">Visa Prep Kit</h3>
+      <p class="res-card__desc">Documents, financial proofs and mock-interview questions — everything embassy-ready in one place.</p>
+      <button type="button" class="res-card__btn" data-resource="Visa Prep Kit">Get the PDF →</button>
+    </article>
+
+    <article class="res-card">
+      <span class="res-card__icon icon-chip--green">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B9B57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5"/></svg>
+      </span>
+      <span class="res-card__tag">Funding</span>
+      <h3 class="res-card__title">Scholarship Finder</h3>
+      <p class="res-card__desc">Where to look and how to qualify for the tuition waivers and scholarships you're actually eligible for.</p>
+      <button type="button" class="res-card__btn" data-resource="Scholarship Finder">Get the PDF →</button>
+    </article>
+
+    <article class="res-card">
+      <span class="res-card__icon icon-chip--indigo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5B4FE9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      </span>
+      <span class="res-card__tag">Tool</span>
+      <h3 class="res-card__title">University Shortlist Worksheet</h3>
+      <p class="res-card__desc">Match your grades and budget to the right universities in minutes, without the guesswork.</p>
+      <button type="button" class="res-card__btn" data-resource="University Shortlist Worksheet">Get the PDF →</button>
+    </article>
+
+    <article class="res-card">
+      <span class="res-card__icon icon-chip--yellow">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C79418" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22L11 13L2 9L22 2Z"/></svg>
+      </span>
+      <span class="res-card__tag">Checklist</span>
+      <h3 class="res-card__title">Pre-Departure Checklist</h3>
+      <p class="res-card__desc">Forex, SIM, packing, airport pickup and your day-one campus brief — everything for a smooth first week.</p>
+      <button type="button" class="res-card__btn" data-resource="Pre-Departure Checklist">Get the PDF →</button>
+    </article>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="dcta">
+  <div class="dcta__inner">
+    <h2>Want a plan built around you?</h2>
+    <p>Resources are a great start — a free consult is even better. Tell us your goals and we'll map the exact steps.</p>
+    <div class="dcta__actions">
+      <a href="index.html#contact" class="dcta__btn dcta__btn--yellow">Book Free Consult →</a>
+      <a href="https://wa.me/8801612497157" target="_blank" rel="noopener" class="dcta__btn dcta__btn--wa">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff"><path d="M12 2C6.5 2 2 6.4 2 11.8C2 13.6 2.5 15.3 3.4 16.8L2 22L7.4 20.6C8.8 21.4 10.4 21.8 12 21.8C17.5 21.8 22 17.4 22 12C22 6.4 17.5 2 12 2ZM16.9 15.4C16.7 16 15.7 16.6 15.2 16.6C14.7 16.7 14.1 16.7 13.5 16.5C13.1 16.4 12.6 16.2 11.9 15.9C9.1 14.7 7.3 11.9 7.2 11.7C7 11.5 6.1 10.3 6.1 9C6.1 7.8 6.7 7.2 7 6.9C7.2 6.6 7.5 6.6 7.7 6.6C7.9 6.6 8 6.6 8.2 6.6C8.4 6.6 8.6 6.5 8.8 7.1C9 7.7 9.6 8.9 9.6 9C9.7 9.1 9.7 9.3 9.6 9.5C9 10.7 8.4 10.6 8.8 11.3C10.2 13.7 11.6 14.5 13.7 15.6C14 15.8 14.2 15.7 14.4 15.5C14.6 15.3 15.2 14.6 15.4 14.3C15.6 14 15.9 14 16.1 14.1C16.4 14.2 17.7 14.9 18 15C18.3 15.2 18.5 15.2 18.5 15.4C18.6 15.5 18.6 16 16.9 15.4Z"/></svg>
+        Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__grid">
+    <div>
+      <div class="footer__logo">RizeUp <em>Global</em></div>
+      <p class="footer__about">Helping Bangladeshi students find their way to global degrees. Based in Chattogram. Trusted across four countries.</p>
+      <div class="footer__social">
+        <a href="https://facebook.com" aria-label="Facebook">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="#ffffff"><path d="M18 2H15A5 5 0 0 0 10 7V10H7V14H10V22H14V14H17L18 10H14V7A1 1 0 0 1 15 6H18Z"/></svg>
+        </a>
+        <a href="https://instagram.com" aria-label="Instagram">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ffffff"/></svg>
+        </a>
+        <a href="https://tiktok.com" aria-label="TikTok">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="#ffffff"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="footer__col-title">Services</div>
+      <div class="footer__links">
+        <a href="index.html#services">University selection</a>
+        <a href="index.html#services">Application &amp; admission</a>
+        <a href="index.html#services">Visa guidance</a>
+        <a href="index.html#services">Scholarship help</a>
+        <a href="index.html#services">Accommodation</a>
+        <a href="index.html#services">Pre-departure</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer__col-title">Destinations</div>
+      <div class="footer__links">
+        <a href="malaysia.html">Malaysia</a>
+        <a href="australia.html">Australia</a>
+        <a href="usa.html">USA</a>
+        <a href="europe.html">Europe</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer__col-title">Contact</div>
+      <div class="footer__links">
+        <a href="https://wa.me/8801612497157">+880 1612-497157 (WhatsApp BD)</a>
+        <a href="https://wa.me/60178853621">+60 17-885 3621 (WhatsApp MY)</a>
+        <a href="mailto:contact@rizeupglobal.com">contact@rizeupglobal.com</a>
+        <a href="mailto:rizeupglobal@gmail.com">rizeupglobal@gmail.com</a>
+        <span>Hazera-Taju College, Old Chandgaon,<br>Chattogram 4212, Bangladesh</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bar">© 2026 RizeUp Global · Find Your Way.</div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/8801612497157" class="wa-float" aria-label="Chat on WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#ffffff"><path d="M12 2C6.5 2 2 6.4 2 11.8C2 13.6 2.5 15.3 3.4 16.8L2 22L7.4 20.6C8.8 21.4 10.4 21.8 12 21.8C17.5 21.8 22 17.4 22 12C22 6.4 17.5 2 12 2ZM16.9 15.4C16.7 16 15.7 16.6 15.2 16.6C14.7 16.7 14.1 16.7 13.5 16.5C13.1 16.4 12.6 16.2 11.9 15.9C9.1 14.7 7.3 11.9 7.2 11.7C7 11.5 6.1 10.3 6.1 9C6.1 7.8 6.7 7.2 7 6.9C7.2 6.6 7.5 6.6 7.7 6.6C7.9 6.6 8 6.6 8.2 6.6C8.4 6.6 8.6 6.5 8.8 7.1C9 7.7 9.6 8.9 9.6 9C9.7 9.1 9.7 9.3 9.6 9.5C9 10.7 8.4 10.6 8.8 11.3C10.2 13.7 11.6 14.5 13.7 15.6C14 15.8 14.2 15.7 14.4 15.5C14.6 15.3 15.2 14.6 15.4 14.3C15.6 14 15.9 14 16.1 14.1C16.4 14.2 17.7 14.9 18 15C18.3 15.2 18.5 15.2 18.5 15.4C18.6 15.5 18.6 16 16.9 15.4Z"/></svg>
+</a>
+
+<script src="resources.js"></script>
+</body>
+</html>
