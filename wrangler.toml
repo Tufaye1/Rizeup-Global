@@ -1,0 +1,13 @@
+# Cloudflare Workers config — serves this static site via Workers Assets.
+# The connected project's deploy command is `npx wrangler deploy`, which
+# reads this file. `[assets] directory` tells Wrangler to upload and serve
+# the static files (HTML/CSS/JS/images) with no Worker script needed.
+#
+# Clean URLs (e.g. /malaysia -> malaysia.html) work automatically via the
+# default html_handling = "auto-trailing-slash".
+
+name = "rizeup-rlobal"
+compatibility_date = "2025-01-01"
+
+[assets]
+directory = "."
