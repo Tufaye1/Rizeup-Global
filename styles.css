@@ -78,21 +78,21 @@ h1, h2, h3, .sora { font-family: 'Sora', sans-serif; }
 .navbar__logo {
   font-family: 'Sora', sans-serif;
   font-weight: 700;
-  font-size: 22px;
-  letter-spacing: -.01em;
+  font-size: 21px;
+  letter-spacing: -.02em;
   color: var(--ink);
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 9px;
 }
 .navbar__logo:hover { color: var(--ink); }
 .navbar__logo-img {
-  width: 34px; height: 34px;
+  width: 32px; height: 32px;
   object-fit: contain;
   display: block;
   flex: none;
 }
-.navbar__logo em { font-style: normal; color: var(--indigo); }
+.navbar__logo em { font-style: normal; color: var(--indigo); margin-left: .22em; }
 .navbar__links { display: flex; gap: 32px; font-size: 15px; font-weight: 500; }
 .navbar__links a { color: var(--muted); }
 .navbar__links a:first-child { color: var(--ink); }
