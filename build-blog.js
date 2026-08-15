@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 /**
- * RizeUp Global — blog build script (no dependencies, Node 18+).
+ * RizeUp Global, blog build script (no dependencies, Node 18+).
  *
  * Pulls published blog posts from Sanity's public API and generates:
  *   - blog.html                (blog index)
  *   - blog/<slug>.html         (article pages, with Article + Breadcrumb schema)
  *   - sitemap.xml              (static pages + all blog posts)
  *
- * Run:  node build-blog.js            (published posts only — for production)
- *       node build-blog.js --preview  (includes drafts — for local review)
+ * Run:  node build-blog.js            (published posts only, for production)
+ *       node build-blog.js --preview  (includes drafts, for local review)
  *
  * Re-run whenever content changes in the Studio, then commit + push.
  */
@@ -266,21 +266,21 @@ function renderIndex(posts) {
     '@type': 'Blog',
     name: 'RizeUp Global Blog',
     url: canonical,
-    description: 'Study-abroad guides for Bangladeshi students — countries, scholarships, applications, visas and more.',
+    description: 'Study-abroad guides for Bangladeshi students, countries, scholarships, applications, visas and more.',
   }];
   const cards = posts.length
     ? `<div class="blog-grid">${posts.map(postCard).join('')}</div>`
-    : `<p class="blog-empty">Articles are on the way — check back soon.</p>`;
+    : `<p class="blog-empty">Articles are on the way, check back soon.</p>`;
   return head(
-    'Study-Abroad Blog & Guides — RizeUp Global',
-    'Free study-abroad guides for Bangladeshi students: country guides, scholarships, university applications, SOPs, visas and costs — from RizeUp Global.',
+    'Study-Abroad Blog & Guides | RizeUp Global',
+    'Free study-abroad guides for Bangladeshi students: country guides, scholarships, university applications, SOPs, visas and costs, from RizeUp Global.',
     canonical, {jsonld}
   ) + navbar(0) + `
 <header class="blog-hero">
   <div class="blog-hero__inner">
     <span class="blog-hero__eyebrow">RizeUp Global Blog</span>
     <h1>Study-Abroad <em>Guides</em></h1>
-    <p>Everything a Bangladeshi student needs — country guides, scholarships, applications, SOPs, visas and costs. Written by counsellors who do this every day.</p>
+    <p>Everything a Bangladeshi student needs, country guides, scholarships, applications, SOPs, visas and costs. Written by counsellors who do this every day.</p>
   </div>
 </header>
 <section class="blog-grid-section">
@@ -294,7 +294,7 @@ function renderArticle(post, related) {
   const author = post.author || {name: 'RizeUp Global Team'};
   const toc = tocFromBody(post.body);
   const desc = (post.seo && post.seo.description) || post.excerpt || '';
-  const title = (post.seo && post.seo.title) || `${post.title} — RizeUp Global`;
+  const title = (post.seo && post.seo.title) || `${post.title} | RizeUp Global`;
   const cover = post.cover && post.cover.url ? post.cover.url : null;
 
   const jsonld = [
@@ -416,7 +416,7 @@ async function main() {
   }
 
   writeSitemap(posts);
-  console.log(`Built ${posts.length} post(s)${PREVIEW ? ' (PREVIEW — incl. drafts)' : ''} + blog index + sitemap.`);
+  console.log(`Built ${posts.length} post(s)${PREVIEW ? ' (PREVIEW, incl. drafts)' : ''} + blog index + sitemap.`);
   posts.forEach((p) => console.log(`  - blog/${p.slug}.html  «${p.title}»`));
 }
 

@@ -1,4 +1,4 @@
-// ============ RizeUp Global — interactions ============
+// ============ RizeUp Global, interactions ============
 
 // ---------- Testimonials carousel ----------
 // Real RizeUp Global students. To add/replace: edit this list

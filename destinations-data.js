@@ -1,21 +1,21 @@
 /* ============================================================
-   RizeUp Global — Destination & University data
+   RizeUp Global, Destination & University data
    ------------------------------------------------------------
    THIS is the file you edit to add / change universities.
    Each country has a blurb and a list of universities.
    For each university:
-     name         – full name
-     short        – abbreviation shown on the placeholder card
-     city         – location
-     rank         – ranking badge text (e.g. "QS World #60")
-     photo        – (optional) path to a real photo in /images.
+     name         - full name
+     short        - abbreviation shown on the placeholder card
+     city         - location
+     rank         - ranking badge text (e.g. "QS World #60")
+     photo        - (optional) path to a real photo in /images.
                     Leave empty ("") to show the styled placeholder.
-     tone         – card accent: 'indigo' | 'yellow' | 'red' | 'green'
-     courses      – array of popular programs (shown as tags)
-     requirements – array of short "what you need to apply" bullets
+     tone         - card accent: 'indigo' | 'yellow' | 'red' | 'green'
+     courses      - array of popular programs (shown as tags)
+     requirements - array of short "what you need to apply" bullets
    ------------------------------------------------------------
    Rankings shown are indicative (QS World University Rankings)
-   and change each year — confirm exact criteria with a counselor.
+   and change each year, confirm exact criteria with a counselor.
    ============================================================ */
 
 window.DESTINATIONS = {
@@ -23,11 +23,11 @@ window.DESTINATIONS = {
     name: 'Malaysia',
     flag: '🇲🇾',
     tagline: 'Affordable, English-taught, close to home.',
-    intro: "Malaysia is where most of our students start — world-ranked universities, tuition from around $3,500/yr, and living costs close to Dhaka. Many programs accept MOI letters instead of IELTS.",
+    intro: "Malaysia is where most of our students start. World-ranked universities, tuition from around $3,500/yr, and living costs close to Dhaka. Many programs accept MOI letters instead of IELTS.",
     stats: [
       { num: '20+', label: 'Universities we place into' },
       { num: '~$3,500/yr', label: 'Tuition from' },
-      { num: '2–3 mo', label: 'Fastest consult-to-flight' },
+      { num: '2-3 mo', label: 'Fastest consult-to-flight' },
     ],
     universities: [
       {
@@ -68,7 +68,7 @@ window.DESTINATIONS = {
       {
         name: 'Asia Pacific University (APU)', short: 'APU', city: 'Kuala Lumpur', rank: 'Top IT & tech private', tone: 'red',
         courses: ['Computer Science', 'Cybersecurity', 'Data Science', 'Business IT', 'Games Development'],
-        requirements: ['HSC / A-Level or foundation', 'IELTS 5.5–6.0 or MOI', 'Basic maths for tech programs'],
+        requirements: ['HSC / A-Level or foundation', 'IELTS 5.5-6.0 or MOI', 'Basic maths for tech programs'],
       },
     ],
   },
@@ -77,11 +77,11 @@ window.DESTINATIONS = {
     name: 'Australia',
     flag: '🇦🇺',
     tagline: 'Global rankings, strong post-study work rights.',
-    intro: "Australia pairs top-40 universities with generous post-study work visas. Plan for 6–9 months including visa, and a tuition budget from around $22,000/yr. Strong grades and IELTS matter here.",
+    intro: "Australia pairs top-40 universities with generous post-study work visas. Plan for 6-9 months including visa, and a tuition budget from around $22,000/yr. Strong grades and IELTS matter here.",
     stats: [
       { num: '40+', label: 'Universities we work with' },
       { num: '~$22,000/yr', label: 'Tuition from' },
-      { num: '6–9 mo', label: 'Typical timeline' },
+      { num: '6-9 mo', label: 'Typical timeline' },
     ],
     universities: [
       {
@@ -92,7 +92,7 @@ window.DESTINATIONS = {
       {
         name: 'University of Sydney', short: 'USYD', city: 'Sydney, NSW', rank: 'QS World #18', tone: 'red',
         courses: ['Engineering', 'Business', 'IT', 'Architecture', 'Health Sciences'],
-        requirements: ['HSC with competitive grades', 'IELTS 6.5–7.0', 'Portfolio for design; SOP'],
+        requirements: ['HSC with competitive grades', 'IELTS 6.5-7.0', 'Portfolio for design; SOP'],
       },
       {
         name: 'UNSW Sydney', short: 'UNSW', city: 'Sydney, NSW', rank: 'QS World #19', tone: 'yellow',
@@ -125,7 +125,7 @@ window.DESTINATIONS = {
     stats: [
       { num: '100+', label: 'Universities across all budgets' },
       { num: '~$15,000/yr', label: 'Tuition from (public unis)' },
-      { num: '6–9 mo', label: 'Typical timeline' },
+      { num: '6-9 mo', label: 'Typical timeline' },
     ],
     universities: [
       {
@@ -165,7 +165,7 @@ window.DESTINATIONS = {
     name: 'Europe',
     flag: '🇪🇺',
     tagline: 'Low-cost tuition and English-taught degrees.',
-    intro: "Europe spans the UK, Germany, Italy, France and more. Germany and Italy offer very low (sometimes free) public tuition; the UK offers fast one-year master's. Requirements vary by country — we map the right fit to your budget and profile.",
+    intro: "Europe spans the UK, Germany, Italy, France and more. Germany and Italy offer very low (sometimes free) public tuition; the UK offers fast one-year master's. Requirements vary by country, we map the right fit to your budget and profile.",
     stats: [
       { num: '6', label: 'Countries: UK, Germany, Italy, France…' },
       { num: 'Low / free', label: 'Public tuition in Germany & Italy' },
@@ -175,12 +175,12 @@ window.DESTINATIONS = {
       {
         name: 'Imperial College London', short: 'ICL', city: 'London, United Kingdom', rank: 'QS World #2', tone: 'indigo',
         courses: ['Engineering', 'Computing', 'Medicine', 'Business', 'Natural Sciences'],
-        requirements: ['HSC / A-Level with top grades', 'IELTS 6.5–7.0', 'SOP; strong maths for STEM'],
+        requirements: ['HSC / A-Level with top grades', 'IELTS 6.5-7.0', 'SOP; strong maths for STEM'],
       },
       {
         name: 'University of Oxford', short: 'OXF', city: 'Oxford, United Kingdom', rank: 'QS World #3', tone: 'red',
         courses: ['PPE', 'Computer Science', 'Engineering', 'Law', 'Medicine'],
-        requirements: ['Exceptional academic record', 'IELTS 7.0–7.5', 'SOP, LORs, admissions test/interview'],
+        requirements: ['Exceptional academic record', 'IELTS 7.0-7.5', 'SOP, LORs, admissions test/interview'],
       },
       {
         name: 'Technical University of Munich (TUM)', short: 'TUM', city: 'Munich, Germany', rank: 'QS World #28', tone: 'yellow',
@@ -200,7 +200,7 @@ window.DESTINATIONS = {
       {
         name: 'Politecnico di Milano', short: 'POLIMI', city: 'Milan, Italy', rank: 'QS World #111', tone: 'red',
         courses: ['Architecture', 'Design', 'Engineering', 'Urban Planning', 'Computer Engineering'],
-        requirements: ['HSC with STEM strength', 'IELTS 6.0–6.5', 'Portfolio for design; low public tuition'],
+        requirements: ['HSC with STEM strength', 'IELTS 6.0-6.5', 'Portfolio for design; low public tuition'],
       },
     ],
   },
