@@ -303,6 +303,7 @@ h1, h2, h3, .sora { font-family: 'Sora', sans-serif; }
 .dest-card__photo--au { background: linear-gradient(135deg, #FEF4DB, #FCE5AE); }
 .dest-card__photo--us { background: linear-gradient(135deg, #FCE7E5, #F8CBC7); }
 .dest-card__photo--eu { background: linear-gradient(135deg, #E6F7EC, #C6EDD6); }
+.dest-card__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .dest-card__body {
   padding: 16px 10px 10px;
   display: flex; flex-direction: column; gap: 8px; flex: 1;

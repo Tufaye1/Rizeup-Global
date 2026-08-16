@@ -56,7 +56,7 @@ window.DESTINATIONS = {
         requirements: ['HSC / A-Level with STEM subjects', 'IELTS 6.0+ or MOI', 'Portfolio for design programs'],
       },
       {
-        name: "Taylor's University", short: 'TU', city: 'Subang Jaya, Selangor', rank: 'QS World #253 (Top private)', tone: 'yellow',
+        name: "Taylor's University", photo: 'images/universities/taylors-university.jpg', short: 'TU', city: 'Subang Jaya, Selangor', rank: 'QS World #253 (Top private)', tone: 'yellow',
         courses: ['Hospitality', 'Business', 'Design', 'Computer Science', 'Biosciences'],
         requirements: ['HSC / A-Level or foundation', 'IELTS 6.0+ (some 5.5 with prep)', 'Portfolio for creative programs'],
       },
@@ -66,7 +66,7 @@ window.DESTINATIONS = {
         requirements: ['HSC / A-Level, competitive GPA', 'IELTS 6.5 (no band < 6.0)', 'Statement of purpose'],
       },
       {
-        name: 'Asia Pacific University (APU)', short: 'APU', city: 'Kuala Lumpur', rank: 'Top IT & tech private', tone: 'red',
+        name: 'Asia Pacific University (APU)', photo: 'images/universities/asia-pacific-university.jpg', short: 'APU', city: 'Kuala Lumpur', rank: 'Top IT & tech private', tone: 'red',
         courses: ['Computer Science', 'Cybersecurity', 'Data Science', 'Business IT', 'Games Development'],
         requirements: ['HSC / A-Level or foundation', 'IELTS 5.5-6.0 or MOI', 'Basic maths for tech programs'],
       },
@@ -100,12 +100,12 @@ window.DESTINATIONS = {
         requirements: ['HSC / foundation year', 'IELTS 6.5 (no band < 6.0)', 'Maths prerequisites for STEM'],
       },
       {
-        name: 'Australian National University (ANU)', short: 'ANU', city: 'Canberra, ACT', rank: 'QS World #30', tone: 'green',
+        name: 'Australian National University (ANU)', photo: 'images/universities/australian-national-university.jpg', short: 'ANU', city: 'Canberra, ACT', rank: 'QS World #30', tone: 'green',
         courses: ['Computing', 'International Relations', 'Sciences', 'Business', 'Engineering'],
         requirements: ['HSC with strong grades', 'IELTS 6.5', 'Statement of purpose'],
       },
       {
-        name: 'Monash University', short: 'MON', city: 'Melbourne, VIC', rank: 'QS World #37', tone: 'indigo',
+        name: 'Monash University', photo: 'images/universities/monash-university.jpg', short: 'MON', city: 'Melbourne, VIC', rank: 'QS World #37', tone: 'indigo',
         courses: ['Business', 'Pharmacy', 'Engineering', 'IT', 'Medicine'],
         requirements: ['HSC / diploma or foundation', 'IELTS 6.5 (no band < 6.0)', 'Program prerequisites'],
       },
@@ -129,12 +129,12 @@ window.DESTINATIONS = {
     ],
     universities: [
       {
-        name: 'Massachusetts Institute of Technology (MIT)', short: 'MIT', city: 'Cambridge, MA', rank: 'QS World #1', tone: 'indigo',
+        name: 'Massachusetts Institute of Technology (MIT)', photo: 'images/universities/mit.jpg', short: 'MIT', city: 'Cambridge, MA', rank: 'QS World #1', tone: 'indigo',
         courses: ['Computer Science', 'Engineering', 'Physics', 'Economics', 'Mathematics'],
         requirements: ['Outstanding academic record', 'TOEFL 100+ / IELTS 7.5', 'SAT/ACT, SOP, strong LORs'],
       },
       {
-        name: 'Stanford University', short: 'STAN', city: 'Stanford, CA', rank: 'QS World #6', tone: 'red',
+        name: 'Stanford University', photo: 'images/universities/stanford-university.jpg', short: 'STAN', city: 'Stanford, CA', rank: 'QS World #6', tone: 'red',
         courses: ['Computer Science', 'Engineering', 'Business', 'Sciences', 'Design'],
         requirements: ['Top grades & extracurriculars', 'TOEFL 100+ / IELTS 7.0+', 'SAT/ACT, essays, LORs'],
       },
@@ -144,12 +144,12 @@ window.DESTINATIONS = {
         requirements: ['HSC with strong grades', 'TOEFL 79+ / IELTS 6.5', 'SAT (test-optional varies), SOP, LORs'],
       },
       {
-        name: 'Purdue University', short: 'PUR', city: 'West Lafayette, IN', rank: 'QS World #99', tone: 'green',
+        name: 'Purdue University', photo: 'images/universities/purdue-university.jpg', short: 'PUR', city: 'West Lafayette, IN', rank: 'QS World #99', tone: 'green',
         courses: ['Engineering', 'Computer Science', 'Aviation', 'Business', 'Sciences'],
         requirements: ['HSC with STEM strength', 'TOEFL 80+ / IELTS 6.5', 'SAT/ACT (varies), SOP, LORs'],
       },
       {
-        name: 'Arizona State University (ASU)', short: 'ASU', city: 'Tempe, AZ', rank: 'Top for international students', tone: 'indigo',
+        name: 'Arizona State University (ASU)', photo: 'images/universities/arizona-state-university.jpg', short: 'ASU', city: 'Tempe, AZ', rank: 'Top for international students', tone: 'indigo',
         courses: ['Business', 'Computer Science', 'Engineering', 'Journalism', 'Sustainability'],
         requirements: ['HSC, min GPA ~3.0', 'TOEFL 61+ / IELTS 6.0', 'SOP; generous merit scholarships'],
       },
@@ -173,7 +173,7 @@ window.DESTINATIONS = {
     ],
     universities: [
       {
-        name: 'Imperial College London', short: 'ICL', city: 'London, United Kingdom', rank: 'QS World #2', tone: 'indigo',
+        name: 'Imperial College London', photo: 'images/universities/imperial-college-london.jpg', short: 'ICL', city: 'London, United Kingdom', rank: 'QS World #2', tone: 'indigo',
         courses: ['Engineering', 'Computing', 'Medicine', 'Business', 'Natural Sciences'],
         requirements: ['HSC / A-Level with top grades', 'IELTS 6.5-7.0', 'SOP; strong maths for STEM'],
       },
@@ -183,7 +183,7 @@ window.DESTINATIONS = {
         requirements: ['Exceptional academic record', 'IELTS 7.0-7.5', 'SOP, LORs, admissions test/interview'],
       },
       {
-        name: 'Technical University of Munich (TUM)', short: 'TUM', city: 'Munich, Germany', rank: 'QS World #28', tone: 'yellow',
+        name: 'Technical University of Munich (TUM)', photo: 'images/universities/technical-university-of-munich.jpg', short: 'TUM', city: 'Munich, Germany', rank: 'QS World #28', tone: 'yellow',
         courses: ['Engineering', 'Computer Science', 'Data Science', 'Management', 'Physics'],
         requirements: ['HSC + recognised qualification', 'IELTS 6.5 (or German for some)', 'Low/no tuition; APS certificate'],
       },
@@ -193,12 +193,12 @@ window.DESTINATIONS = {
         requirements: ['HSC / A-Level, good grades', 'IELTS 6.5', 'SOP; scholarships available'],
       },
       {
-        name: 'Heidelberg University', short: 'HD', city: 'Heidelberg, Germany', rank: 'QS World #47', tone: 'indigo',
+        name: 'Heidelberg University', photo: 'images/universities/heidelberg-university.jpg', short: 'HD', city: 'Heidelberg, Germany', rank: 'QS World #47', tone: 'indigo',
         courses: ['Medicine', 'Sciences', 'Humanities', 'Law', 'Economics'],
         requirements: ['HSC + recognised qualification', 'IELTS 6.5 or German', 'APS certificate; low/no tuition'],
       },
       {
-        name: 'Politecnico di Milano', short: 'POLIMI', city: 'Milan, Italy', rank: 'QS World #111', tone: 'red',
+        name: 'Politecnico di Milano', photo: 'images/universities/politecnico-di-milano.jpg', short: 'POLIMI', city: 'Milan, Italy', rank: 'QS World #111', tone: 'red',
         courses: ['Architecture', 'Design', 'Engineering', 'Urban Planning', 'Computer Engineering'],
         requirements: ['HSC with STEM strength', 'IELTS 6.0-6.5', 'Portfolio for design; low public tuition'],
       },
