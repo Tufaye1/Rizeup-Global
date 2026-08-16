@@ -31,27 +31,27 @@ window.DESTINATIONS = {
     ],
     universities: [
       {
-        name: 'Universiti Malaya (UM)', short: 'UM', city: 'Kuala Lumpur', rank: 'QS World #60', tone: 'indigo',
+        name: 'Universiti Malaya (UM)', photo: 'images/universities/universiti-malaya.jpg', short: 'UM', city: 'Kuala Lumpur', rank: 'QS World #60', tone: 'indigo',
         courses: ['Computer Science', 'Engineering', 'Medicine', 'Business', 'Law'],
         requirements: ['HSC / A-Level with strong GPA', 'IELTS 6.0+ (or accepted MOI letter)', 'Statement of purpose'],
       },
       {
-        name: 'Universiti Putra Malaysia (UPM)', short: 'UPM', city: 'Serdang, Selangor', rank: 'QS World #148', tone: 'green',
+        name: 'Universiti Putra Malaysia (UPM)', photo: 'images/universities/universiti-putra-malaysia.jpg', short: 'UPM', city: 'Serdang, Selangor', rank: 'QS World #148', tone: 'green',
         courses: ['Agriculture & Food', 'Engineering', 'Business', 'Computer Science', 'Veterinary'],
         requirements: ['HSC / A-Level, min GPA ~3.0', 'IELTS 6.0+ or MOI', 'Program-specific prerequisites'],
       },
       {
-        name: 'Universiti Kebangsaan Malaysia (UKM)', short: 'UKM', city: 'Bangi, Selangor', rank: 'QS World #138', tone: 'yellow',
+        name: 'Universiti Kebangsaan Malaysia (UKM)', photo: 'images/universities/universiti-kebangsaan-malaysia.jpg', short: 'UKM', city: 'Bangi, Selangor', rank: 'QS World #138', tone: 'yellow',
         courses: ['Medicine', 'Engineering', 'Social Sciences', 'Business', 'IT'],
         requirements: ['HSC / A-Level with good grades', 'IELTS 6.0+ or MOI', 'Statement of purpose'],
       },
       {
-        name: 'Universiti Sains Malaysia (USM)', short: 'USM', city: 'Penang', rank: 'QS World #146', tone: 'red',
+        name: 'Universiti Sains Malaysia (USM)', photo: 'images/universities/universiti-sains-malaysia.jpg', short: 'USM', city: 'Penang', rank: 'QS World #146', tone: 'red',
         courses: ['Pharmacy', 'Engineering', 'Computer Science', 'Sciences', 'Management'],
         requirements: ['HSC / A-Level, min GPA ~3.0', 'IELTS 6.0+ or MOI', 'Relevant science background for STEM'],
       },
       {
-        name: 'Universiti Teknologi Malaysia (UTM)', short: 'UTM', city: 'Johor Bahru / KL', rank: 'QS World #181', tone: 'indigo',
+        name: 'Universiti Teknologi Malaysia (UTM)', photo: 'images/universities/universiti-teknologi-malaysia.jpg', short: 'UTM', city: 'Johor Bahru / KL', rank: 'QS World #181', tone: 'indigo',
         courses: ['Engineering', 'Architecture', 'Computer Science', 'Built Environment', 'Business'],
         requirements: ['HSC / A-Level with STEM subjects', 'IELTS 6.0+ or MOI', 'Portfolio for design programs'],
       },
@@ -61,7 +61,7 @@ window.DESTINATIONS = {
         requirements: ['HSC / A-Level or foundation', 'IELTS 6.0+ (some 5.5 with prep)', 'Portfolio for creative programs'],
       },
       {
-        name: 'Monash University Malaysia', short: 'MU', city: 'Bandar Sunway, Selangor', rank: 'Australian degree in Malaysia', tone: 'green',
+        name: 'Monash University Malaysia', photo: 'images/universities/monash-university-malaysia.jpg', short: 'MU', city: 'Bandar Sunway, Selangor', rank: 'Australian degree in Malaysia', tone: 'green',
         courses: ['Business', 'Engineering', 'IT', 'Pharmacy', 'Psychology'],
         requirements: ['HSC / A-Level, competitive GPA', 'IELTS 6.5 (no band < 6.0)', 'Statement of purpose'],
       },
@@ -85,17 +85,17 @@ window.DESTINATIONS = {
     ],
     universities: [
       {
-        name: 'University of Melbourne', short: 'UoM', city: 'Melbourne, VIC', rank: 'QS World #13', tone: 'indigo',
+        name: 'University of Melbourne', photo: 'images/universities/university-of-melbourne.jpg', short: 'UoM', city: 'Melbourne, VIC', rank: 'QS World #13', tone: 'indigo',
         courses: ['Business', 'Engineering', 'Computer Science', 'Medicine', 'Law'],
         requirements: ['HSC + strong academic record', 'IELTS 6.5 (no band < 6.0)', 'SOP; some programs need prerequisites'],
       },
       {
-        name: 'University of Sydney', short: 'USYD', city: 'Sydney, NSW', rank: 'QS World #18', tone: 'red',
+        name: 'University of Sydney', photo: 'images/universities/university-of-sydney.jpg', short: 'USYD', city: 'Sydney, NSW', rank: 'QS World #18', tone: 'red',
         courses: ['Engineering', 'Business', 'IT', 'Architecture', 'Health Sciences'],
         requirements: ['HSC with competitive grades', 'IELTS 6.5-7.0', 'Portfolio for design; SOP'],
       },
       {
-        name: 'UNSW Sydney', short: 'UNSW', city: 'Sydney, NSW', rank: 'QS World #19', tone: 'yellow',
+        name: 'UNSW Sydney', photo: 'images/universities/unsw-sydney.jpg', short: 'UNSW', city: 'Sydney, NSW', rank: 'QS World #19', tone: 'yellow',
         courses: ['Engineering', 'Computer Science', 'Business', 'Data Science', 'Design'],
         requirements: ['HSC / foundation year', 'IELTS 6.5 (no band < 6.0)', 'Maths prerequisites for STEM'],
       },
@@ -110,7 +110,7 @@ window.DESTINATIONS = {
         requirements: ['HSC / diploma or foundation', 'IELTS 6.5 (no band < 6.0)', 'Program prerequisites'],
       },
       {
-        name: 'University of Queensland (UQ)', short: 'UQ', city: 'Brisbane, QLD', rank: 'QS World #40', tone: 'red',
+        name: 'University of Queensland (UQ)', photo: 'images/universities/university-of-queensland.jpg', short: 'UQ', city: 'Brisbane, QLD', rank: 'QS World #40', tone: 'red',
         courses: ['Engineering', 'Business', 'Agriculture', 'Sciences', 'IT'],
         requirements: ['HSC with good results', 'IELTS 6.5', 'SOP; some scholarships available'],
       },
@@ -139,7 +139,7 @@ window.DESTINATIONS = {
         requirements: ['Top grades & extracurriculars', 'TOEFL 100+ / IELTS 7.0+', 'SAT/ACT, essays, LORs'],
       },
       {
-        name: 'University of Illinois Urbana-Champaign', short: 'UIUC', city: 'Urbana, IL', rank: 'QS World #69', tone: 'yellow',
+        name: 'University of Illinois Urbana-Champaign', photo: 'images/universities/university-of-illinois-urbana-champaign.jpg', short: 'UIUC', city: 'Urbana, IL', rank: 'QS World #69', tone: 'yellow',
         courses: ['Computer Science', 'Engineering', 'Business', 'Data Science', 'Agriculture'],
         requirements: ['HSC with strong grades', 'TOEFL 79+ / IELTS 6.5', 'SAT (test-optional varies), SOP, LORs'],
       },
@@ -154,7 +154,7 @@ window.DESTINATIONS = {
         requirements: ['HSC, min GPA ~3.0', 'TOEFL 61+ / IELTS 6.0', 'SOP; generous merit scholarships'],
       },
       {
-        name: 'University of Texas at Dallas (UTD)', short: 'UTD', city: 'Richardson, TX', rank: 'Strong value & scholarships', tone: 'red',
+        name: 'University of Texas at Dallas (UTD)', photo: 'images/universities/university-of-texas-at-dallas.jpg', short: 'UTD', city: 'Richardson, TX', rank: 'Strong value & scholarships', tone: 'red',
         courses: ['Computer Science', 'Business Analytics', 'Engineering', 'Finance', 'Data Science'],
         requirements: ['HSC with good grades', 'TOEFL 80+ / IELTS 6.5', 'SOP, LORs; scholarships for strong GPA'],
       },
@@ -178,7 +178,7 @@ window.DESTINATIONS = {
         requirements: ['HSC / A-Level with top grades', 'IELTS 6.5-7.0', 'SOP; strong maths for STEM'],
       },
       {
-        name: 'University of Oxford', short: 'OXF', city: 'Oxford, United Kingdom', rank: 'QS World #3', tone: 'red',
+        name: 'University of Oxford', photo: 'images/universities/university-of-oxford.jpg', short: 'OXF', city: 'Oxford, United Kingdom', rank: 'QS World #3', tone: 'red',
         courses: ['PPE', 'Computer Science', 'Engineering', 'Law', 'Medicine'],
         requirements: ['Exceptional academic record', 'IELTS 7.0-7.5', 'SOP, LORs, admissions test/interview'],
       },
@@ -188,7 +188,7 @@ window.DESTINATIONS = {
         requirements: ['HSC + recognised qualification', 'IELTS 6.5 (or German for some)', 'Low/no tuition; APS certificate'],
       },
       {
-        name: 'University of Manchester', short: 'UoM', city: 'Manchester, United Kingdom', rank: 'QS World #34', tone: 'green',
+        name: 'University of Manchester', photo: 'images/universities/university-of-manchester.jpg', short: 'UoM', city: 'Manchester, United Kingdom', rank: 'QS World #34', tone: 'green',
         courses: ['Business', 'Engineering', 'Computer Science', 'Sciences', 'Social Sciences'],
         requirements: ['HSC / A-Level, good grades', 'IELTS 6.5', 'SOP; scholarships available'],
       },
