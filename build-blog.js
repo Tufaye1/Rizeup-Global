@@ -173,7 +173,7 @@ function navbar(depth) {
       <a href="${p}index.html#destinations">Destinations</a>
       <a href="${p}blog.html">Blog</a>
       <a href="${p}resources.html">Resources</a>
-      <a href="${p}index.html#faq">FAQ</a>
+      <a href="${p}faq.html">FAQ</a>
     </div>
     <a href="${p}index.html#contact" class="navbar__cta">Free Consult</a>
   </div>
@@ -370,6 +370,7 @@ function writeSitemap(posts) {
   const today = new Date().toISOString().slice(0, 10);
   const staticUrls = [
     ['/', '1.0', 'weekly'], ['/blog', '0.9', 'daily'], ['/resources', '0.8', 'weekly'],
+    ['/faq', '0.6', 'monthly'],
     ['/malaysia', '0.8', 'monthly'], ['/australia', '0.8', 'monthly'],
     ['/usa', '0.8', 'monthly'], ['/europe', '0.8', 'monthly'],
   ];
