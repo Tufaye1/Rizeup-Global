@@ -242,10 +242,21 @@ const fmtDate = (iso) => {
 };
 const initials = (name) => (name || 'RG').split(' ').map((w) => w[0]).slice(0, 2).join('').toUpperCase();
 
+// Sanity's image CDN will not resize an SVG: ?w= alone is ignored and the
+// original (up to 1.8MB here) is served. Forcing a raster format with fm=
+// makes the whole transform pipeline apply, which takes the blog index from
+// ~5MB of covers down to ~140KB. Non-Sanity URLs are passed through untouched.
+function cdnImg(url, params) {
+  if (!url || url.indexOf('cdn.sanity.io') === -1) return url;
+  return url + (url.indexOf('?') === -1 ? '?' : '&') + params;
+}
+
 function postCard(post, i) {
   const cat = post.categories && post.categories[0] ? post.categories[0].title : 'Study Abroad';
+  // The first two cards are above the fold on most screens, so they load eagerly.
+  const lazy = i > 1 ? ' loading="lazy" decoding="async"' : '';
   const media = post.cover && post.cover.url
-    ? `<div class="post-card__media"><img src="${esc(post.cover.url)}" alt="${esc(post.cover.alt || post.title)}"></div>`
+    ? `<div class="post-card__media"><img src="${esc(cdnImg(post.cover.url, 'w=800&fm=webp&q=75&fit=max'))}" alt="${esc(post.cover.alt || post.title)}" width="800" height="450"${lazy}></div>`
     : `<div class="post-card__media post-card__media--ph ${PH[i % 4]}">${esc(initials(post.title))}</div>`;
   return `
     <article class="post-card">
@@ -317,7 +328,8 @@ function renderArticle(post, related) {
       author: {'@type': 'Person', name: author.name},
       publisher: {'@type': 'Organization', name: 'RizeUp Global', logo: {'@type': 'ImageObject', url: `${SITE}/favicon.png`}},
       mainEntityOfPage: canonical,
-      ...(cover ? {image: cover} : {}),
+      // Structured-data image should be a raster, not the source SVG.
+      ...(cover ? {image: cdnImg(cover, 'w=1200&h=630&fit=crop&fm=jpg&q=80')} : {}),
     },
     {
       '@context': 'https://schema.org',
@@ -340,7 +352,7 @@ function renderArticle(post, related) {
     <ol>${toc.map((t) => `<li><a href="#${t.id}">${esc(t.text)}</a></li>`).join('')}</ol>
   </nav>` : '';
 
-  const coverHtml = cover ? `<div class="article__cover"><img src="${esc(cover)}" alt="${esc((post.cover && post.cover.alt) || post.title)}"></div>` : '';
+  const coverHtml = cover ? `<div class="article__cover"><img src="${esc(cdnImg(cover, 'w=1400&fm=webp&q=78&fit=max'))}" alt="${esc((post.cover && post.cover.alt) || post.title)}" width="1400" height="788" decoding="async" fetchpriority="high"></div>` : '';
 
   const relatedHtml = related.length ? `
 <section class="article__related">
@@ -358,7 +370,8 @@ function renderArticle(post, related) {
     </div>
   </div>`;
 
-  return head(title, desc, canonical, {depth: 1, ogType: 'article', ogImage: cover || undefined, jsonld}) + navbar(1) + `
+  const ogImage = cover ? cdnImg(cover, 'w=1200&h=630&fit=crop&fm=jpg&q=80') : undefined;
+  return head(title, desc, canonical, {depth: 1, ogType: 'article', ogImage, jsonld}) + navbar(1) + `
 <article class="article">
   <div class="article__breadcrumb"><a href="../index.html">Home</a> › <a href="../blog.html">Blog</a> › ${esc(post.title)}</div>
   <span class="article__tag">${esc(cat)}</span>
