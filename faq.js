@@ -1,4 +1,4 @@
-// ============ RizeUp Global — FAQ page accordion ============
+// ============ RizeUp Global, FAQ page accordion ============
 document.querySelectorAll('.faq-item__q').forEach((btn) => {
   btn.addEventListener('click', () => {
     const item = btn.closest('.faq-item');

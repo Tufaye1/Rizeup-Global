@@ -168,7 +168,7 @@ function navbar(depth) {
       <img src="${p}navbar-logo.png" alt="" class="navbar__logo-img">
       RizeUp<em>Global</em>
     </a>
-    <div class="navbar__links">
+    <div class="navbar__links" id="nav-links">
       <a href="${p}index.html#services">Services</a>
       <a href="${p}index.html#destinations">Destinations</a>
       <a href="${p}blog.html">Blog</a>
@@ -176,6 +176,9 @@ function navbar(depth) {
       <a href="${p}faq.html">FAQ</a>
     </div>
     <a href="${p}index.html#contact" class="navbar__cta">Free Consult</a>
+    <button class="navbar__toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>`;
 }
@@ -217,10 +220,8 @@ function footer(depth) {
     <div>
       <div class="footer__col-title">Contact</div>
       <div class="footer__links">
-        <a href="https://wa.me/8801612497157">+880 1612-497157 (WhatsApp BD)</a>
-        <a href="https://wa.me/60178853621">+60 17-885 3621 (WhatsApp MY)</a>
+        <a href="https://wa.me/60178853621">+60 17-885 3621 (WhatsApp)</a>
         <a href="mailto:contact@rizeupglobal.com">contact@rizeupglobal.com</a>
-        <a href="mailto:rizeupglobal@gmail.com">rizeupglobal@gmail.com</a>
         <span>Hazera-Taju College, Old Chandgaon,<br>Chattogram 4212, Bangladesh</span>
       </div>
     </div>
@@ -228,6 +229,7 @@ function footer(depth) {
   <div class="footer__bar">© 2026 RizeUp Global · Find Your Way.</div>
 </footer>
 <a href="https://wa.me/${WA}" class="wa-float" aria-label="Chat on WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="#ffffff"><path d="M12 2C6.5 2 2 6.4 2 11.8C2 13.6 2.5 15.3 3.4 16.8L2 22L7.4 20.6C8.8 21.4 10.4 21.8 12 21.8C17.5 21.8 22 17.4 22 12C22 6.4 17.5 2 12 2ZM16.9 15.4C16.7 16 15.7 16.6 15.2 16.6C14.7 16.7 14.1 16.7 13.5 16.5C13.1 16.4 12.6 16.2 11.9 15.9C9.1 14.7 7.3 11.9 7.2 11.7C7 11.5 6.1 10.3 6.1 9C6.1 7.8 6.7 7.2 7 6.9C7.2 6.6 7.5 6.6 7.7 6.6C7.9 6.6 8 6.6 8.2 6.6C8.4 6.6 8.6 6.5 8.8 7.1C9 7.7 9.6 8.9 9.6 9C9.7 9.1 9.7 9.3 9.6 9.5C9 10.7 8.4 10.6 8.8 11.3C10.2 13.7 11.6 14.5 13.7 15.6C14 15.8 14.2 15.7 14.4 15.5C14.6 15.3 15.2 14.6 15.4 14.3C15.6 14 15.9 14 16.1 14.1C16.4 14.2 17.7 14.9 18 15C18.3 15.2 18.5 15.2 18.5 15.4C18.6 15.5 18.6 16 16.9 15.4Z"/></svg></a>
+<script src="${p}site.js" defer></script>
 </body>
 </html>`;
 }
@@ -269,7 +271,7 @@ function renderIndex(posts) {
     description: 'Study-abroad guides for Bangladeshi students, countries, scholarships, applications, visas and more.',
   }];
   const cards = posts.length
-    ? `<div class="blog-grid">${posts.map(postCard).join('')}</div>`
+    ? `<div class="blog-grid reveal">${posts.map(postCard).join('')}</div>`
     : `<p class="blog-empty">Articles are on the way, check back soon.</p>`;
   return head(
     'Study-Abroad Blog & Guides | RizeUp Global',
@@ -291,7 +293,14 @@ function renderIndex(posts) {
 function renderArticle(post, related) {
   const canonical = `${SITE}/blog/${post.slug}`;
   const cat = post.categories && post.categories[0] ? post.categories[0].title : 'Study Abroad';
-  const author = post.author || {name: 'RizeUp Global Team'};
+  // Trim CMS-entered names: a stray trailing space in Sanity would otherwise
+  // land in the visible byline and in the Article JSON-LD.
+  const rawAuthor = post.author || {name: 'RizeUp Global Team'};
+  const author = {
+    ...rawAuthor,
+    name: (rawAuthor.name || '').trim() || 'RizeUp Global Team',
+    role: (rawAuthor.role || '').trim(),
+  };
   const toc = tocFromBody(post.body);
   const desc = (post.seo && post.seo.description) || post.excerpt || '';
   const title = (post.seo && post.seo.title) || `${post.title} | RizeUp Global`;
@@ -336,7 +345,7 @@ function renderArticle(post, related) {
   const relatedHtml = related.length ? `
 <section class="article__related">
   <h2>Keep reading</h2>
-  <div class="blog-grid">${related.map(postCard).join('')}</div>
+  <div class="blog-grid reveal">${related.map(postCard).join('')}</div>
 </section>` : '';
 
   const ctaHtml = `
@@ -357,7 +366,7 @@ function renderArticle(post, related) {
   <div class="article__meta">${avatar}<div><b>${esc(author.name)}</b>${author.role ? ` · ${esc(author.role)}` : ''}${post.publishedAt ? `<br>${esc(fmtDate(post.publishedAt))}` : ''}</div></div>
   ${coverHtml}
   ${tocHtml}
-  <div class="article__body">
+  <div class="article__body reveal">
 ${bodyToHtml(post.body)}
   </div>
   ${ctaHtml}

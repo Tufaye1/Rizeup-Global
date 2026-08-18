@@ -35,7 +35,7 @@
       <img src="navbar-logo.png" alt="" class="navbar__logo-img">
       RizeUp<em>Global</em>
     </a>
-    <div class="navbar__links">
+    <div class="navbar__links" id="nav-links">
       <a href="index.html#services">Services</a>
       <a href="index.html#destinations">Destinations</a>
       <a href="blog.html">Blog</a>
@@ -43,6 +43,9 @@
       <a href="faq.html">FAQ</a>
     </div>
     <a href="index.html#contact" class="navbar__cta">Free Consult</a>
+    <button class="navbar__toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
@@ -51,20 +54,20 @@
 
 <!-- UNIVERSITIES -->
 <section class="uni-section">
-  <div class="uni-section__head">
+  <div class="uni-section__head reveal">
     <h2>Universities We <em>Place Into</em></h2>
     <p>A shortlist of strong, well-ranked universities. Book a free consult below and a counselor will build the right shortlist for your grades and budget.</p>
   </div>
   <div id="uni-grid" class="uni-grid"></div>
 </section>
 
-<div class="uni-disclaimer">
+<div class="uni-disclaimer reveal">
   <p>University rankings, courses and entry requirements shown here are indicative (based on QS World University Rankings and public admissions info) and change each year. Your counselor confirms the exact criteria for your program before you apply.</p>
 </div>
 
 <!-- CTA BAND -->
 <section class="dcta">
-  <div class="dcta__inner">
+  <div class="dcta__inner reveal">
     <h2>Not sure which one fits you?</h2>
     <p>Book a free consult and we'll shortlist the right universities for your grades, budget, and goals, no pressure.</p>
     <div class="dcta__actions">
@@ -137,5 +140,6 @@
 <script>window.COUNTRY_KEY = 'europe';</script>
 <script src="destinations-data.js"></script>
 <script src="destination.js"></script>
+<script src="site.js" defer></script>
 </body>
 </html>

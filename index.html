@@ -35,7 +35,7 @@
       <img src="navbar-logo.png" alt="" class="navbar__logo-img">
       RizeUp<em>Global</em>
     </a>
-    <div class="navbar__links">
+    <div class="navbar__links" id="nav-links">
       <a href="#services">Services</a>
       <a href="#destinations">Destinations</a>
       <a href="blog.html">Blog</a>
@@ -43,6 +43,9 @@
       <a href="faq.html">FAQ</a>
     </div>
     <a href="#contact" class="navbar__cta">Free Consult</a>
+    <button class="navbar__toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
@@ -51,10 +54,10 @@
   <div class="hero__blob"></div>
   <div class="hero__grid">
     <div>
-      <h1>Find Your Way to a <em>Global Degree.</em></h1>
-      <p class="hero__lede">RizeUp Global is the end-to-end study-abroad partner for Bangladeshi students. From shortlisting universities to landing in your dorm, we handle it all.</p>
-      <div class="hero__actions">
-        <a href="#contact" class="hero__cta">Book Free Consult →</a>
+      <h1 class="reveal">Find Your Way to a <em>Global Degree.</em></h1>
+      <p class="hero__lede reveal reveal--d1">RizeUp Global is the end-to-end study-abroad partner for Bangladeshi students. From shortlisting universities to landing in your dorm, we handle it all.</p>
+      <div class="hero__actions reveal reveal--d2">
+        <a href="#contact" class="hero__cta">Book Free Consult <span class="hero__cta-arrow" aria-hidden="true">→</span></a>
         <a href="#destinations" class="hero__play">
           <span class="hero__play-btn">
             <svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 1.5L12 7L3 12.5Z" fill="#171040"/></svg>
@@ -63,7 +66,7 @@
         </a>
       </div>
     </div>
-    <div class="hero__collage">
+    <div class="hero__collage reveal reveal--d2">
       <span class="dot dot--red"></span>
       <span class="dot dot--yellow"></span>
       <span class="dot dot--indigo"></span>
@@ -84,52 +87,44 @@
     </div>
   </div>
 
-  <!-- mini-cards -->
+  <!-- capability strip -->
   <div class="hero__cards">
-    <div class="mini-card">
-      <span class="mini-card__icon icon-chip--indigo">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#5B4FE9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21L16.5 16.5"/></svg>
-      </span>
-      <div>
-        <div class="mini-card__title">University Selection</div>
-        <div class="mini-card__desc">Personal shortlist based on your scores, budget, and goals.</div>
+    <div class="hero__cards-inner reveal reveal--d3">
+      <div class="capability">
+        <span class="capability__icon icon-chip--indigo"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5B4FE9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21L16.5 16.5"/></svg></span>
+        <div class="capability__title">University Selection</div>
+        <p class="capability__desc">Personal shortlist based on your scores, budget, and goals.</p>
       </div>
-    </div>
-    <div class="mini-card">
-      <span class="mini-card__icon icon-chip--yellow">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C79418" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8H16"/><path d="M8 12H16"/><path d="M8 16H12"/></svg>
-      </span>
-      <div>
-        <div class="mini-card__title">Visa Guidance</div>
-        <div class="mini-card__desc">Forms, financial proofs, embassy interviews, done right.</div>
+      <div class="capability">
+        <span class="capability__icon icon-chip--yellow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C79418" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8H16"/><path d="M8 12H16"/><path d="M8 16H12"/></svg></span>
+        <div class="capability__title">Visa Guidance</div>
+        <p class="capability__desc">Forms, financial proofs, embassy interviews, done right.</p>
       </div>
-    </div>
-    <div class="mini-card">
-      <span class="mini-card__icon icon-chip--red">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E8544D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5L7 21L12 18.5L17 21L15.5 12.5"/></svg>
-      </span>
-      <div>
-        <div class="mini-card__title">Scholarship Help</div>
-        <div class="mini-card__desc">We map your profile to scholarships you're actually eligible for.</div>
+      <div class="capability">
+        <span class="capability__icon icon-chip--red"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8544D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5L7 21L12 18.5L17 21L15.5 12.5"/></svg></span>
+        <div class="capability__title">Scholarship Help</div>
+        <p class="capability__desc">We map your profile to scholarships you're actually eligible for.</p>
       </div>
     </div>
   </div>
 
   <!-- trust bar -->
-  <div class="hero__trust">
+  <div class="hero__trust reveal reveal--d4">
     <span class="hero__trust-label">Featured in</span>
-    <span class="hero__trust-name">The Daily Star</span>
-    <span class="hero__trust-name">Prothom Alo</span>
-    <span class="hero__trust-name">Dhaka Tribune</span>
-    <span class="hero__trust-name">BD News 24</span>
+    <div class="hero__trust-names">
+      <span class="hero__trust-name">The Daily Star</span>
+      <span class="hero__trust-name">Prothom Alo</span>
+      <span class="hero__trust-name">Dhaka Tribune</span>
+      <span class="hero__trust-name">BD News 24</span>
+    </div>
   </div>
 </header>
 
 <!-- SERVICES -->
 <section id="services" class="services">
-  <h2 class="section-title">Everything You Need, <em>End to End.</em></h2>
-  <p class="section-sub">Six services that take you from choosing a country to landing on campus. No back and forth between five agencies. One partner, every step.</p>
-  <div class="services__grid">
+  <h2 class="section-title reveal">Everything You Need, <em>End to End.</em></h2>
+  <p class="section-sub reveal reveal--d1">Six services that take you from choosing a country to landing on campus. No back and forth between five agencies. One partner, every step.</p>
+  <div class="services__grid reveal reveal--d2">
     <div class="service-card">
       <span class="service-card__icon icon-chip--indigo">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#5B4FE9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21L16.5 16.5"/></svg>
@@ -177,7 +172,7 @@
 
 <!-- STATS SPLIT -->
 <section class="stats">
-  <div class="stats__visual">
+  <div class="stats__visual reveal">
     <div class="stats__arch"></div>
     <div class="stats__photo"><img src="images/stats-photo.webp" alt="Excited student celebrating with a laptop and backpack"></div>
     <span class="dot dot--yellow"></span>
@@ -231,9 +226,9 @@
 <!-- DESTINATIONS BAND -->
 <section id="destinations" class="destinations">
   <div class="container">
-    <h2>Four Markets. One Partner.</h2>
-    <p class="destinations__sub">We're live in every market we list. Pick a country, we'll handle the rest.</p>
-    <div class="destinations__grid">
+    <h2 class="reveal">Four Markets. One Partner.</h2>
+    <p class="destinations__sub reveal reveal--d1">We're live in every market we list. Pick a country, we'll handle the rest.</p>
+    <div class="destinations__grid reveal reveal--d2">
       <div class="dest-card">
         <div class="dest-card__photo dest-card__photo--my"><img src="images/destination-malaysia.jpg" alt="Petronas Twin Towers at dusk, Kuala Lumpur, Malaysia" loading="lazy"></div>
         <div class="dest-card__body">
@@ -277,9 +272,9 @@
 <!-- TRACKER SPLIT -->
 <section class="tracker">
   <div>
-    <h2>Track <em>Every Step.</em></h2>
+    <h2 class="reveal">Track <em>Every Step.</em></h2>
     <p class="tracker__lede">Real-time status on every application. Visa progress, scholarships, document checklist, all in one place. Your dedicated counselor is on the other end of every step.</p>
-    <div class="tracker__points">
+    <div class="tracker__points reveal reveal--d1">
       <div class="tracker__point">
         <span class="tracker__point-icon icon-chip--indigo">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5B4FE9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12H7L10 5L14 19L17 12H21"/></svg>
@@ -341,7 +336,7 @@
 
 <!-- TESTIMONIALS -->
 <section class="testimonials">
-  <div class="testimonials__inner">
+  <div class="testimonials__inner reveal">
     <span class="dot dot--indigo"></span>
     <span class="dot dot--yellow"></span>
     <span class="dot dot--red"></span>
@@ -361,7 +356,7 @@
 
 <!-- RESOURCES CTA -->
 <section id="resources" class="lead">
-  <div class="lead__banner">
+  <div class="lead__banner reveal">
     <span class="blob blob--yellow"></span>
     <span class="blob blob--purple"></span>
     <div class="lead__copy">
@@ -379,23 +374,17 @@
 <section id="contact" class="contact">
   <div class="contact__top">
     <span class="contact__blob" aria-hidden="true"></span>
-    <div class="contact__top-inner">
+    <div class="contact__top-inner reveal">
       <div class="contact__intro">
         <h2>Talk to a real counselor,<br>not a call center.</h2>
         <p>Free, no pressure. Tell us where you want to go and we'll tell you exactly how.</p>
       </div>
       <div class="contact__quicklinks">
-        <a href="https://wa.me/8801612497157" class="quicklink">
-          <span class="quicklink__icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#1B9B57"><path d="M12 2C6.5 2 2 6.4 2 11.8C2 13.6 2.5 15.3 3.4 16.8L2 22L7.4 20.6C8.8 21.4 10.4 21.8 12 21.8C17.5 21.8 22 17.4 22 12C22 6.4 17.5 2 12 2ZM16.9 15.4C16.7 16 15.7 16.6 15.2 16.6C14.7 16.7 14.1 16.7 13.5 16.5C13.1 16.4 12.6 16.2 11.9 15.9C9.1 14.7 7.3 11.9 7.2 11.7C7 11.5 6.1 10.3 6.1 9C6.1 7.8 6.7 7.2 7 6.9C7.2 6.6 7.5 6.6 7.7 6.6C7.9 6.6 8 6.6 8.2 6.6C8.4 6.6 8.6 6.5 8.8 7.1C9 7.7 9.6 8.9 9.6 9C9.7 9.1 9.7 9.3 9.6 9.5C9 10.7 8.4 10.6 8.8 11.3C10.2 13.7 11.6 14.5 13.7 15.6C14 15.8 14.2 15.7 14.4 15.5C14.6 15.3 15.2 14.6 15.4 14.3C15.6 14 15.9 14 16.1 14.1C16.4 14.2 17.7 14.9 18 15C18.3 15.2 18.5 15.2 18.5 15.4C18.6 15.5 18.6 16 16.9 15.4Z"/></svg>
-          </span>
-          WhatsApp BD
-        </a>
         <a href="https://wa.me/60178853621" class="quicklink">
           <span class="quicklink__icon">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="#1B9B57"><path d="M12 2C6.5 2 2 6.4 2 11.8C2 13.6 2.5 15.3 3.4 16.8L2 22L7.4 20.6C8.8 21.4 10.4 21.8 12 21.8C17.5 21.8 22 17.4 22 12C22 6.4 17.5 2 12 2ZM16.9 15.4C16.7 16 15.7 16.6 15.2 16.6C14.7 16.7 14.1 16.7 13.5 16.5C13.1 16.4 12.6 16.2 11.9 15.9C9.1 14.7 7.3 11.9 7.2 11.7C7 11.5 6.1 10.3 6.1 9C6.1 7.8 6.7 7.2 7 6.9C7.2 6.6 7.5 6.6 7.7 6.6C7.9 6.6 8 6.6 8.2 6.6C8.4 6.6 8.6 6.5 8.8 7.1C9 7.7 9.6 8.9 9.6 9C9.7 9.1 9.7 9.3 9.6 9.5C9 10.7 8.4 10.6 8.8 11.3C10.2 13.7 11.6 14.5 13.7 15.6C14 15.8 14.2 15.7 14.4 15.5C14.6 15.3 15.2 14.6 15.4 14.3C15.6 14 15.9 14 16.1 14.1C16.4 14.2 17.7 14.9 18 15C18.3 15.2 18.5 15.2 18.5 15.4C18.6 15.5 18.6 16 16.9 15.4Z"/></svg>
           </span>
-          WhatsApp MY
+          WhatsApp
         </a>
         <a href="mailto:contact@rizeupglobal.com" class="quicklink">
           <span class="quicklink__icon">
@@ -411,12 +400,10 @@
     <div class="contact__panel reveal">
       <div class="contact__offices">
         <div class="office-card">
-          <span class="office-card__flag" aria-hidden="true">🇧🇩</span>
           <div class="office-card__title">Bangladesh</div>
           <p class="office-card__addr">Hazera-Taju College, Old Chandgaon, Chattogram 4212, Bangladesh</p>
         </div>
         <div class="office-card">
-          <span class="office-card__flag" aria-hidden="true">🇲🇾</span>
           <div class="office-card__title">Malaysia</div>
           <p class="office-card__addr">B-12-07, Utropolis Glenmarie, U1/14 Jalan Kontraktor, 40150 Shah Alam, Selangor, Malaysia</p>
         </div>
@@ -490,10 +477,8 @@
     <div>
       <div class="footer__col-title">Contact</div>
       <div class="footer__links">
-        <a href="https://wa.me/8801612497157">+880 1612-497157 (WhatsApp BD)</a>
-        <a href="https://wa.me/60178853621">+60 17-885 3621 (WhatsApp MY)</a>
+        <a href="https://wa.me/60178853621">+60 17-885 3621 (WhatsApp)</a>
         <a href="mailto:contact@rizeupglobal.com">contact@rizeupglobal.com</a>
-        <a href="mailto:rizeupglobal@gmail.com">rizeupglobal@gmail.com</a>
         <span>Hazera-Taju College, Old Chandgaon,<br>Chattogram 4212, Bangladesh</span>
       </div>
     </div>
@@ -546,5 +531,6 @@
 }
 </script>
 <script src="script.js"></script>
+<script src="site.js" defer></script>
 </body>
 </html>

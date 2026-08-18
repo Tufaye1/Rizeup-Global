@@ -1,4 +1,4 @@
-// ============ RizeUp Global — Resources page ============
+// ============ RizeUp Global, Resources page ============
 
 const resForm = document.getElementById('res-form');
 const resStatus = document.getElementById('res-status');
@@ -14,7 +14,7 @@ document.querySelectorAll('.res-card__btn').forEach((btn) => {
     if (resEmail) setTimeout(() => resEmail.focus(), 400);
     if (resStatus) {
       resStatus.className = 'res-hero__status';
-      resStatus.textContent = `Great pick — add your email and we'll send “${btn.dataset.resource}”.`;
+      resStatus.textContent = `Great pick, add your email and we'll send “${btn.dataset.resource}”.`;
     }
   });
 });
@@ -36,7 +36,7 @@ if (resForm) {
       if (res.ok) {
         resForm.reset();
         resStatus.className = 'res-hero__status ok';
-        resStatus.textContent = "Done! Check your inbox — your resources are on the way.";
+        resStatus.textContent = "Done! Check your inbox, your resources are on the way.";
         resSubmit.textContent = 'Sent ✓';
       } else {
         const d = await res.json().catch(() => ({}));

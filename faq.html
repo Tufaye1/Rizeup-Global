@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FAQ — RizeUp Global</title>
+<title>FAQ | RizeUp Global</title>
 <meta name="description" content="Answers to the questions Bangladeshi students and parents ask us most: counselling cost, cheapest countries, IELTS, scholarships, visas and timelines.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,12 +17,12 @@
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="RizeUp Global">
-<meta property="og:title" content="FAQ — RizeUp Global">
+<meta property="og:title" content="FAQ | RizeUp Global">
 <meta property="og:description" content="Answers to the questions Bangladeshi students and parents ask us most: counselling cost, cheapest countries, IELTS, scholarships, visas and timelines.">
 <meta property="og:url" content="https://rizeupglobal.com/faq">
 <meta property="og:image" content="https://rizeupglobal.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="FAQ — RizeUp Global">
+<meta name="twitter:title" content="FAQ | RizeUp Global">
 <meta name="twitter:description" content="Answers to the questions Bangladeshi students and parents ask us most: counselling cost, cheapest countries, IELTS, scholarships, visas and timelines.">
 <meta name="twitter:image" content="https://rizeupglobal.com/og-image.png">
 <script type="application/ld+json">
@@ -107,7 +107,7 @@
       <img src="navbar-logo.png" alt="" class="navbar__logo-img">
       RizeUp<em>Global</em>
     </a>
-    <div class="navbar__links">
+    <div class="navbar__links" id="nav-links">
       <a href="index.html#services">Services</a>
       <a href="index.html#destinations">Destinations</a>
       <a href="blog.html">Blog</a>
@@ -115,6 +115,9 @@
       <a href="faq.html">FAQ</a>
     </div>
     <a href="index.html#contact" class="navbar__cta">Free Consult</a>
+    <button class="navbar__toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
@@ -129,7 +132,7 @@
 
 <!-- FAQ -->
 <section class="faq" style="padding-top:56px">
-  <div class="faq__list">
+  <div class="faq__list reveal">
     <div class="faq-item open">
       <button class="faq-item__q" type="button" aria-expanded="true">
         <span>How much does your counselling cost?</span>
@@ -256,5 +259,6 @@
 </a>
 
 <script src="faq.js"></script>
+<script src="site.js" defer></script>
 </body>
 </html>

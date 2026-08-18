@@ -1,5 +1,5 @@
 // ============================================================
-// RizeUp Global — Destination page renderer
+// RizeUp Global, Destination page renderer
 // Reads window.COUNTRY_KEY + window.DESTINATIONS and builds the page.
 // Conversion happens through the page-level CTA band (Book Free
 // Consult / WhatsApp), so the cards themselves stay clean & info-only.
@@ -75,7 +75,7 @@ function renderPage() {
       '<p class="dhero__intro"><a href="index.html#destinations">Back to destinations →</a></p></div>';
     return;
   }
-  document.title = `Study in ${data.name} — RizeUp Global`;
+  document.title = `Study in ${data.name} | RizeUp Global`;
   document.getElementById('dhero').innerHTML = renderHero();
   document.getElementById('uni-grid').innerHTML = data.universities.map(renderCard).join('');
 

@@ -35,7 +35,7 @@
       <img src="navbar-logo.png" alt="" class="navbar__logo-img">
       RizeUp<em>Global</em>
     </a>
-    <div class="navbar__links">
+    <div class="navbar__links" id="nav-links">
       <a href="index.html#services">Services</a>
       <a href="index.html#destinations">Destinations</a>
       <a href="blog.html">Blog</a>
@@ -43,6 +43,9 @@
       <a href="faq.html">FAQ</a>
     </div>
     <a href="index.html#contact" class="navbar__cta">Free Consult</a>
+    <button class="navbar__toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
@@ -66,11 +69,11 @@
 
 <!-- RESOURCE / ARTICLE CARDS -->
 <section class="res-section">
-  <div class="res-section__head">
+  <div class="res-section__head reveal">
     <h2>Guides &amp; <em>Handbooks</em></h2>
     <p>Pick what you need. Hit “Get the PDF”, add your email, and we'll send it over, every guide is free.</p>
   </div>
-  <div class="res-grid">
+  <div class="res-grid reveal reveal--d1">
     <article class="res-card">
       <span class="res-card__icon icon-chip--indigo">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5B4FE9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2V6Z"/><path d="M9 4v14"/><path d="M15 6v14"/></svg>
@@ -135,7 +138,7 @@
 
 <!-- CTA BAND -->
 <section class="dcta">
-  <div class="dcta__inner">
+  <div class="dcta__inner reveal">
     <h2>Want a plan built around you?</h2>
     <p>Resources are a great start, a free consult is even better. Tell us your goals and we'll map the exact steps.</p>
     <div class="dcta__actions">
@@ -206,5 +209,6 @@
 </a>
 
 <script src="resources.js"></script>
+<script src="site.js" defer></script>
 </body>
 </html>
