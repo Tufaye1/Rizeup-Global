@@ -7,3 +7,5 @@ node_modules
 build-blog.js
 content
 .agents
+CLAUDE.md
+skills-lock.json
