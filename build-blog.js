@@ -251,12 +251,24 @@ function cdnImg(url, params) {
   return url + (url.indexOf('?') === -1 ? '?' : '&') + params;
 }
 
+// Build a width-based srcset so a phone fetches a phone-sized file and a
+// retina screen still gets enough pixels. q=80 because these covers are flat
+// vector illustrations, where lossy chroma subsampling shows up quickly.
+function cdnSrcset(url, widths) {
+  if (!url || url.indexOf('cdn.sanity.io') === -1) return '';
+  return widths
+    .map((w) => `${cdnImg(url, `w=${w}&fm=webp&q=80&fit=max`)} ${w}w`)
+    .join(', ');
+}
+
 function postCard(post, i) {
   const cat = post.categories && post.categories[0] ? post.categories[0].title : 'Study Abroad';
   // The first two cards are above the fold on most screens, so they load eagerly.
   const lazy = i > 1 ? ' loading="lazy" decoding="async"' : '';
+  // Grid is 3-up over 1024px, 2-up over 560px, 1-up below that.
+  const cardSizes = '(min-width: 1025px) 370px, (min-width: 561px) 45vw, calc(100vw - 40px)';
   const media = post.cover && post.cover.url
-    ? `<div class="post-card__media"><img src="${esc(cdnImg(post.cover.url, 'w=800&fm=webp&q=75&fit=max'))}" alt="${esc(post.cover.alt || post.title)}" width="800" height="450"${lazy}></div>`
+    ? `<div class="post-card__media"><img src="${esc(cdnImg(post.cover.url, 'w=800&fm=webp&q=80&fit=max'))}" srcset="${esc(cdnSrcset(post.cover.url, [400, 600, 800, 1200]))}" sizes="${cardSizes}" alt="${esc(post.cover.alt || post.title)}" width="1600" height="900"${lazy}></div>`
     : `<div class="post-card__media post-card__media--ph ${PH[i % 4]}">${esc(initials(post.title))}</div>`;
   return `
     <article class="post-card">
@@ -352,7 +364,7 @@ function renderArticle(post, related) {
     <ol>${toc.map((t) => `<li><a href="#${t.id}">${esc(t.text)}</a></li>`).join('')}</ol>
   </nav>` : '';
 
-  const coverHtml = cover ? `<div class="article__cover"><img src="${esc(cdnImg(cover, 'w=1400&fm=webp&q=78&fit=max'))}" alt="${esc((post.cover && post.cover.alt) || post.title)}" width="1400" height="788" decoding="async" fetchpriority="high"></div>` : '';
+  const coverHtml = cover ? `<div class="article__cover"><img src="${esc(cdnImg(cover, 'w=1000&fm=webp&q=80&fit=max'))}" srcset="${esc(cdnSrcset(cover, [600, 800, 1000, 1520]))}" sizes="(min-width: 800px) 696px, calc(100vw - 40px)" alt="${esc((post.cover && post.cover.alt) || post.title)}" width="1600" height="900" decoding="async" fetchpriority="high"></div>` : '';
 
   const relatedHtml = related.length ? `
 <section class="article__related">
