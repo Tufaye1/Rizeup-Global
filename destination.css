@@ -19,7 +19,7 @@
 .dhero__title { font-weight: 800; font-size: 48px; margin: 0 0 12px; }
 .dhero__title em { font-style: normal; color: var(--indigo); }
 .dhero__tagline {
-  font-family: 'Sora', sans-serif; font-weight: 700; font-size: 18px;
+  font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 700; font-size: 18px;
   color: var(--indigo); margin: 0 0 18px;
 }
 .dhero__intro {
@@ -33,7 +33,7 @@
   background: #ffffff; border-radius: 16px; padding: 18px 26px;
   box-shadow: 0 6px 20px rgba(23, 16, 64, .05); min-width: 150px;
 }
-.dhero__stat-num { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 24px; color: var(--ink); }
+.dhero__stat-num { font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 800; font-size: 24px; color: var(--ink); }
 .dhero__stat-label { font-size: 12.5px; color: var(--muted); margin-top: 4px; line-height: 1.4; }
 
 /* ---------- University grid ---------- */
@@ -72,7 +72,7 @@
 }
 .uni-card__img { width: 100%; height: 100%; object-fit: cover; }
 .uni-card__mark {
-  font-family: 'Sora', sans-serif; font-weight: 700; font-size: 30px;
+  font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 700; font-size: 30px;
   color: var(--c-accent); letter-spacing: .01em;
   opacity: .92;
 }
@@ -86,7 +86,7 @@
 
 .uni-card__body { padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1; }
 .uni-card__name {
-  font-family: 'Sora', sans-serif; font-weight: 600; font-size: 16.5px;
+  font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 600; font-size: 16.5px;
   margin: 0 0 7px; line-height: 1.3; letter-spacing: -.01em; color: var(--ink);
 }
 .uni-card__loc {

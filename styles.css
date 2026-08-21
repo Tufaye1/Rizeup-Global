@@ -32,7 +32,7 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   color: var(--ink);
   background: #ffffff;
 }
@@ -40,7 +40,7 @@ body {
 a { color: var(--indigo); text-decoration: none; }
 a:hover { color: var(--indigo-dark); }
 
-h1, h2, h3, .sora { font-family: 'Sora', sans-serif; }
+h1, h2, h3, .sora { font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; }
 
 input::placeholder,
 textarea::placeholder { color: var(--muted); opacity: 1; }
@@ -74,7 +74,7 @@ textarea::placeholder { color: var(--muted); opacity: 1; }
   padding: 13px 28px;
   font-size: 15px;
   font-weight: 700;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   cursor: pointer;
 }
 .btn-primary:hover { background: var(--indigo-dark); color: #ffffff; }
@@ -97,7 +97,7 @@ textarea::placeholder { color: var(--muted); opacity: 1; }
   gap: 24px;
 }
 .navbar__logo {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   font-weight: 700;
   font-size: 21px;
   letter-spacing: -.02em;
@@ -274,7 +274,7 @@ textarea::placeholder { color: var(--muted); opacity: 1; }
 }
 .capability:hover .capability__icon { transform: translateY(-3px) scale(1.04); }
 .capability__title {
-  font-family: 'Sora', sans-serif; font-weight: 700; font-size: 17px;
+  font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 700; font-size: 17px;
   margin-bottom: 6px;
 }
 .capability__desc { font-size: 13.5px; color: var(--muted); line-height: 1.55; margin: 0; }
@@ -301,7 +301,7 @@ textarea::placeholder { color: var(--muted); opacity: 1; }
   justify-content: center;
 }
 .hero__trust-name {
-  font-family: 'Sora', sans-serif; font-weight: 700;
+  font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 700;
   font-size: 14px; color: var(--faint);
   position: relative;
   transition: color .22s ease;
@@ -341,7 +341,7 @@ textarea::placeholder { color: var(--muted); opacity: 1; }
   display: flex; align-items: center; justify-content: center;
   margin-bottom: 18px;
 }
-.service-card__title { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 19px; margin-bottom: 8px; }
+.service-card__title { font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 700; font-size: 19px; margin-bottom: 8px; }
 .service-card__desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
 
 /* ---------- Stats split ---------- */
@@ -375,7 +375,7 @@ textarea::placeholder { color: var(--muted); opacity: 1; }
   flex: none; width: 46px; height: 46px; border-radius: 12px;
   display: flex; align-items: center; justify-content: center;
 }
-.stat__num { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 22px; line-height: 1; }
+.stat__num { font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 800; font-size: 22px; line-height: 1; }
 .stat__label { font-size: 13px; color: var(--muted); margin-top: 4px; }
 
 /* ---------- Destinations ---------- */
@@ -419,7 +419,7 @@ textarea::placeholder { color: var(--muted); opacity: 1; }
   font-size: 11.5px; font-weight: 700;
   border-radius: 999px; padding: 4px 12px;
 }
-.dest-card__name { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 20px; }
+.dest-card__name { font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 700; font-size: 20px; }
 .dest-card__stat { font-size: 13px; color: var(--muted); line-height: 1.5; flex: 1; }
 .dest-card__cta {
   align-self: flex-start;
@@ -461,7 +461,7 @@ textarea::placeholder { color: var(--muted); opacity: 1; }
   display: flex; justify-content: space-between; align-items: center;
   margin-bottom: 18px;
 }
-.tracker__card-title { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 17px; }
+.tracker__card-title { font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 700; font-size: 17px; }
 .pill { font-size: 12px; font-weight: 700; border-radius: 999px; padding: 4px 12px; }
 .pill--green { color: var(--green); background: var(--tint-green); }
 .pill--yellow { color: var(--yellow-fg); background: var(--tint-yellow); }
@@ -508,7 +508,7 @@ textarea::placeholder { color: var(--muted); opacity: 1; }
 .testimonials__nav button {
   width: 42px; height: 42px; border-radius: 50%;
   font-size: 17px; cursor: pointer;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
 }
 .testimonials__nav .prev {
   border: 2px solid var(--indigo); background: #ffffff; color: var(--indigo);
@@ -540,7 +540,7 @@ textarea::placeholder { color: var(--muted); opacity: 1; }
 .t-avatar__face {
   width: 100%; height: 100%; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Sora', sans-serif; font-weight: 700; font-size: 16px;
+  font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 700; font-size: 16px;
   color: #ffffff;
   overflow: hidden;
   background: var(--lavender-deep);
@@ -555,7 +555,7 @@ textarea::placeholder { color: var(--muted); opacity: 1; }
   font-size: 20px; line-height: 1.65; font-weight: 500;
   margin: 0 auto 18px; max-width: 680px; text-wrap: pretty;
 }
-.testimonials__name { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 18px; }
+.testimonials__name { font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 700; font-size: 18px; }
 .testimonials__role { font-size: 13.5px; color: var(--muted); margin-top: 2px; }
 .testimonials__note {
   margin-top: 22px; display: inline-block;
@@ -593,7 +593,7 @@ textarea::placeholder { color: var(--muted); opacity: 1; }
 .lead__form select {
   border: none; border-radius: 999px;
   padding: 14px 22px; font-size: 14.5px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   background: #ffffff; color: var(--ink);
   cursor: pointer;
 }
@@ -601,7 +601,7 @@ textarea::placeholder { color: var(--muted); opacity: 1; }
 .lead__row input {
   flex: 1; min-width: 0; border: none; border-radius: 999px;
   padding: 14px 22px; font-size: 14.5px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   outline: none;
 }
 .lead__row button {
@@ -609,7 +609,7 @@ textarea::placeholder { color: var(--muted); opacity: 1; }
   background: var(--yellow); color: var(--ink);
   border: none; border-radius: 999px;
   padding: 14px 24px; font-size: 14.5px; font-weight: 700;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   cursor: pointer;
 }
 .lead__row button:hover { background: var(--yellow-dark); }
@@ -628,7 +628,7 @@ textarea::placeholder { color: var(--muted); opacity: 1; }
   padding: 18px 22px;
   background: none; border: none; cursor: pointer;
   text-align: left;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
 }
 .faq-item__q span:first-child { font-weight: 700; font-size: 15.5px; color: var(--ink); }
 .faq-item__sym {
@@ -661,7 +661,7 @@ textarea::placeholder { color: var(--muted); opacity: 1; }
 }
 .contact__intro { max-width: 520px; }
 .contact__intro h2 {
-  font-family: 'Sora', sans-serif; font-weight: 800; font-size: 38px; line-height: 1.2;
+  font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 800; font-size: 38px; line-height: 1.2;
   color: #ffffff; margin: 0 0 14px;
 }
 .contact__intro p { color: #CBC6F6; font-size: 16px; line-height: 1.6; margin: 0; text-wrap: pretty; }
@@ -694,12 +694,12 @@ textarea::placeholder { color: var(--muted); opacity: 1; }
   transition: transform .22s ease;
 }
 .office-card:hover { transform: translateY(-2px); }
-.office-card__title { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 16px; }
+.office-card__title { font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 700; font-size: 16px; }
 .office-card__addr { font-size: 13.5px; color: var(--muted); line-height: 1.6; margin: 0; }
 
 .contact__form { padding: 40px 40px 36px; }
 .contact__form-head { margin-bottom: 20px; }
-.contact__form-title { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 19px; margin-bottom: 4px; }
+.contact__form-title { font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 700; font-size: 19px; margin-bottom: 4px; }
 .contact__form-note { font-size: 13px; color: var(--muted); }
 .contact__form-row {
   display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;
@@ -709,7 +709,7 @@ textarea::placeholder { color: var(--muted); opacity: 1; }
 .contact__form textarea {
   border: 1px solid var(--border); border-radius: 12px;
   padding: 13px 16px; font-size: 14px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   color: var(--ink);
   outline: none;
   background: #ffffff;
@@ -726,7 +726,7 @@ textarea::placeholder { color: var(--muted); opacity: 1; }
   background: var(--indigo); color: #ffffff;
   border: none; border-radius: 999px;
   padding: 15px; font-size: 15px; font-weight: 700;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   cursor: pointer;
   transition: background .15s ease, transform .15s ease;
 }
@@ -752,7 +752,7 @@ textarea::placeholder { color: var(--muted); opacity: 1; }
   max-width: 1200px; margin: 0 auto; padding: 0 32px;
   display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 40px;
 }
-.footer__logo { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 22px; margin-bottom: 14px; }
+.footer__logo { font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 800; font-size: 22px; margin-bottom: 14px; }
 .footer__logo em { font-style: normal; color: var(--yellow); }
 .footer__about {
   font-size: 13.5px; color: var(--footer-text); line-height: 1.65;
@@ -766,7 +766,7 @@ textarea::placeholder { color: var(--muted); opacity: 1; }
   color: #ffffff; font-size: 14px; font-weight: 700;
 }
 .footer__social a:hover { background: var(--indigo); color: #ffffff; }
-.footer__col-title { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 16px; margin-bottom: 16px; }
+.footer__col-title { font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 700; font-size: 16px; margin-bottom: 16px; }
 .footer__links { display: flex; flex-direction: column; gap: 10px; font-size: 13.5px; }
 .footer__links a { color: var(--footer-text); }
 .footer__links a:hover { color: var(--yellow); }

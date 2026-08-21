@@ -44,12 +44,16 @@
 })();
 
 // ---------- Scroll-reveal (see .reveal in styles.css) ----------
-// Progressive enhancement: the hidden state is gated behind .js-reveal on
-// <html>, so if this script never runs the content is simply visible. There's
-// also a bail-out if IntersectionObserver never reports, which would otherwise
-// leave the hero stuck at opacity 0.
+// Deliberately NOT using IntersectionObserver thresholds. A threshold of 0.15
+// is unsatisfiable for any element taller than ~6.7x the viewport: a 6410px
+// blog grid on an 844px phone caps out at ratio 0.132, so isIntersecting never
+// fired and the content stayed at opacity 0 forever. A plain rect check has no
+// such trap and is trivially cheap when throttled to one rAF per scroll.
+//
+// The hidden state is also gated behind .js-reveal on <html>, so if this script
+// never loads the content is simply visible.
 (function () {
-  const targets = document.querySelectorAll('.reveal');
+  const targets = [].slice.call(document.querySelectorAll('.reveal'));
   if (!targets.length) return;
 
   const root = document.documentElement;
@@ -57,7 +61,7 @@
     targets.forEach(function (el) { el.classList.add('is-visible'); });
   };
 
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     root.classList.add('js-reveal');
     revealAll();
     return;
@@ -65,28 +69,39 @@
 
   root.classList.add('js-reveal');
 
-  // A healthy observer reports on every target it is given, including ones
-  // that are off screen (isIntersecting false). So "did it report at all" is
-  // the honest health check. Counting only reveals would wrongly call the
-  // observer broken on pages whose sections all start below the fold.
-  let reported = false;
-  const observer = new IntersectionObserver(function (entries) {
-    reported = true;
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
+  let pending = targets.slice();
+  let queued = false;
+
+  const check = function () {
+    queued = false;
+    const limit = window.innerHeight - 40;
+    pending = pending.filter(function (el) {
+      const r = el.getBoundingClientRect();
+      // Any part of it has entered the viewport (minus a small bottom margin).
+      if (r.top < limit && r.bottom > 0) {
+        el.classList.add('is-visible');
+        return false;
       }
+      return true;
     });
-  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    if (!pending.length) {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    }
+  };
 
-  targets.forEach(function (el) { observer.observe(el); });
+  const onScroll = function () {
+    if (queued) return;
+    queued = true;
+    window.requestAnimationFrame(check);
+  };
 
-  // Never leave content stranded at opacity 0. If the observer never reported,
-  // give up on the animation and show everything.
+  window.addEventListener('scroll', onScroll, {passive: true});
+  window.addEventListener('resize', onScroll);
+  check();
+
+  // Last-resort guarantee: content is never left invisible, whatever happens.
   window.setTimeout(function () {
-    if (reported) return;
-    observer.disconnect();
-    revealAll();
-  }, 1200);
+    if (pending.length) revealAll();
+  }, 3000);
 })();

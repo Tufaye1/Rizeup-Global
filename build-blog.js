@@ -136,9 +136,11 @@ function head(title, desc, canonical, opts = {}) {
 <meta name="description" content="${esc(desc)}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="${p}styles.css">
-<link rel="stylesheet" href="${p}blog.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap"></noscript>
+<link rel="stylesheet" href="${p}styles.css?v=20260821">
+<link rel="stylesheet" href="${p}blog.css?v=20260821">
 <link rel="icon" type="image/png" sizes="32x32" href="${p}favicon-32.png">
 <link rel="icon" type="image/png" href="${p}favicon.png">
 <link rel="apple-touch-icon" href="${p}apple-touch-icon.png">
@@ -229,7 +231,7 @@ function footer(depth) {
   <div class="footer__bar">© 2026 RizeUp Global · Find Your Way.</div>
 </footer>
 <a href="https://wa.me/${WA}" class="wa-float" aria-label="Chat on WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="#ffffff"><path d="M12 2C6.5 2 2 6.4 2 11.8C2 13.6 2.5 15.3 3.4 16.8L2 22L7.4 20.6C8.8 21.4 10.4 21.8 12 21.8C17.5 21.8 22 17.4 22 12C22 6.4 17.5 2 12 2ZM16.9 15.4C16.7 16 15.7 16.6 15.2 16.6C14.7 16.7 14.1 16.7 13.5 16.5C13.1 16.4 12.6 16.2 11.9 15.9C9.1 14.7 7.3 11.9 7.2 11.7C7 11.5 6.1 10.3 6.1 9C6.1 7.8 6.7 7.2 7 6.9C7.2 6.6 7.5 6.6 7.7 6.6C7.9 6.6 8 6.6 8.2 6.6C8.4 6.6 8.6 6.5 8.8 7.1C9 7.7 9.6 8.9 9.6 9C9.7 9.1 9.7 9.3 9.6 9.5C9 10.7 8.4 10.6 8.8 11.3C10.2 13.7 11.6 14.5 13.7 15.6C14 15.8 14.2 15.7 14.4 15.5C14.6 15.3 15.2 14.6 15.4 14.3C15.6 14 15.9 14 16.1 14.1C16.4 14.2 17.7 14.9 18 15C18.3 15.2 18.5 15.2 18.5 15.4C18.6 15.5 18.6 16 16.9 15.4Z"/></svg></a>
-<script src="${p}site.js" defer></script>
+<script src="${p}site.js?v=20260821" defer></script>
 </body>
 </html>`;
 }
@@ -271,7 +273,7 @@ function postCard(post, i) {
     ? `<div class="post-card__media"><img src="${esc(cdnImg(post.cover.url, 'w=800&fm=webp&q=80&fit=max'))}" srcset="${esc(cdnSrcset(post.cover.url, [400, 600, 800, 1200]))}" sizes="${cardSizes}" alt="${esc(post.cover.alt || post.title)}" width="1600" height="900"${lazy}></div>`
     : `<div class="post-card__media post-card__media--ph ${PH[i % 4]}">${esc(initials(post.title))}</div>`;
   return `
-    <article class="post-card">
+    <article class="post-card reveal${i % 3 === 1 ? ' reveal--d1' : i % 3 === 2 ? ' reveal--d2' : ''}">
       <a href="blog/${esc(post.slug)}.html">
         ${media}
         <div class="post-card__body">
@@ -294,7 +296,7 @@ function renderIndex(posts) {
     description: 'Study-abroad guides for Bangladeshi students, countries, scholarships, applications, visas and more.',
   }];
   const cards = posts.length
-    ? `<div class="blog-grid reveal">${posts.map(postCard).join('')}</div>`
+    ? `<div class="blog-grid">${posts.map(postCard).join('')}</div>`
     : `<p class="blog-empty">Articles are on the way, check back soon.</p>`;
   return head(
     'Study-Abroad Blog & Guides | RizeUp Global',
@@ -369,7 +371,7 @@ function renderArticle(post, related) {
   const relatedHtml = related.length ? `
 <section class="article__related">
   <h2>Keep reading</h2>
-  <div class="blog-grid reveal">${related.map(postCard).join('')}</div>
+  <div class="blog-grid">${related.map(postCard).join('')}</div>
 </section>` : '';
 
   const ctaHtml = `
@@ -391,7 +393,7 @@ function renderArticle(post, related) {
   <div class="article__meta">${avatar}<div><b>${esc(author.name)}</b>${author.role ? ` · ${esc(author.role)}` : ''}${post.publishedAt ? `<br>${esc(fmtDate(post.publishedAt))}` : ''}</div></div>
   ${coverHtml}
   ${tocHtml}
-  <div class="article__body reveal">
+  <div class="article__body">
 ${bodyToHtml(post.body)}
   </div>
   ${ctaHtml}
