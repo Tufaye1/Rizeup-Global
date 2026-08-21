@@ -263,7 +263,9 @@ function cdnSrcset(url, widths) {
     .join(', ');
 }
 
-function postCard(post, i) {
+function postCard(post, i, depth) {
+  // depth 0 = blog index (root), depth 1 = an article page already inside /blog/.
+  const linkPrefix = depth ? '' : 'blog/';
   const cat = post.categories && post.categories[0] ? post.categories[0].title : 'Study Abroad';
   // The first two cards are above the fold on most screens, so they load eagerly.
   const lazy = i > 1 ? ' loading="lazy" decoding="async"' : '';
@@ -274,7 +276,7 @@ function postCard(post, i) {
     : `<div class="post-card__media post-card__media--ph ${PH[i % 4]}">${esc(initials(post.title))}</div>`;
   return `
     <article class="post-card reveal${i % 3 === 1 ? ' reveal--d1' : i % 3 === 2 ? ' reveal--d2' : ''}">
-      <a href="blog/${esc(post.slug)}.html">
+      <a href="${linkPrefix}${esc(post.slug)}.html">
         ${media}
         <div class="post-card__body">
           <span class="post-card__tag">${esc(cat)}</span>
@@ -296,7 +298,7 @@ function renderIndex(posts) {
     description: 'Study-abroad guides for Bangladeshi students, countries, scholarships, applications, visas and more.',
   }];
   const cards = posts.length
-    ? `<div class="blog-grid">${posts.map(postCard).join('')}</div>`
+    ? `<div class="blog-grid">${posts.map((p, i) => postCard(p, i, 0)).join('')}</div>`
     : `<p class="blog-empty">Articles are on the way, check back soon.</p>`;
   return head(
     'Study-Abroad Blog & Guides | RizeUp Global',
@@ -371,7 +373,7 @@ function renderArticle(post, related) {
   const relatedHtml = related.length ? `
 <section class="article__related">
   <h2>Keep reading</h2>
-  <div class="blog-grid">${related.map(postCard).join('')}</div>
+  <div class="blog-grid">${related.map((p, i) => postCard(p, i, 1)).join('')}</div>
 </section>` : '';
 
   const ctaHtml = `
