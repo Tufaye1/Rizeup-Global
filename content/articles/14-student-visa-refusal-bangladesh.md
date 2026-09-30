@@ -19,13 +19,27 @@ If the letter is vague, that is still information. Vague usually means the offic
 
 ## The reasons that actually come up
 
-**Money, and how it looks on paper.** This is the big one for Bangladeshi applicants. Officers are not only checking that the number is large enough. They look at how it got there. A balance that appeared in your account three weeks before you applied reads as borrowed, even when it is not. They want to see funds that have been sitting still, in an account with a clear owner, with a paper trail explaining where the money came from.
+**Money, and how it looks on paper.** This is the big one for Bangladeshi applicants, and the rules are more specific than most people realise.
+
+For the UK, you need your course fee for one academic year plus living costs of £1,529 a month in London or £1,171 a month outside it, for up to nine months. So a student heading to Manchester is showing roughly £10,539 in living costs on top of tuition. Canada asks for CAN$23,448 a year for a single applicant, and that figure sits on top of tuition and airfare, not inside it.
+
+Now the part that sinks applications. The UK requires that money to sit in the account for 28 days in a row, and the 28-day period has to end within 31 days of the day you apply. Not 28 days on average. Twenty-eight consecutive days, evidenced. A balance that arrives the week before you apply fails this on the arithmetic alone, no matter whose money it is.
+
+Bangladesh is not on the UK's differential evidence list, so you do not get the lighter documentary treatment that applicants from some countries get. You prove everything.
+
+Officers also look at how the money got there. They want funds that have been sitting still, in an account with a clear owner, with a paper trail explaining the source.
 
 **They do not believe you are going to study.** Officers are trained to ask whether this application makes sense as an education decision. A student with a commerce background applying for an unrelated diploma, at a university nobody at the embassy has heard of, in a country where they happen to have three cousins, triggers this. The fix is not a better bank statement. It is explaining your choice so it sounds like a plan rather than a route.
 
 **Documents that do not agree with each other.** Your name spelled two ways across your passport and certificates. A gap in your education that the forms do not mention. An employer letter with no verifiable phone number. None of these are fraud, and all of them cost people visas.
 
 **The interview.** If you were called for a credibility interview and answered "I don't know" about your own course fees or your city, that alone can sink it.
+
+## What a refusal actually costs you
+
+Worth being blunt about the money, because it changes how carefully you treat attempt number two. A UK student visa costs £558 to apply for from outside the country, and the immigration health surcharge is £776 per year on top, so £1,552 for a two-year course. A refusal does not give any of that back. Add the £80 if you then ask for a review.
+
+That is before the deposit you may have paid the university, and before the intake you miss.
 
 ## Appeal, or apply again?
 
@@ -44,6 +58,10 @@ Write down, in one sentence, what the officer did not believe. Then ask yourself
 If your funds were the problem, that may mean waiting three or four months so the account has real history behind it. Painful, and still faster than two more refusals.
 
 If your study plan was the problem, you may need a different course or a different university, not a rewritten statement. A refusal on credibility grounds follows you into the next application, so the second file has to be visibly stronger, not lightly edited.
+
+## A note on the numbers above
+
+Every figure here comes from the UK Home Office and the Canadian government, checked in October 2026. These change, sometimes with very little notice, and the monthly maintenance rates in particular have gone up more than once in recent years. Before you move money or book anything, message us on WhatsApp and we will confirm the current amount for your country and your intake. It takes us a minute and it has saved students a lot more than that.
 
 ## Where we come in
 
