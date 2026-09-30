@@ -404,6 +404,36 @@ ${relatedHtml}` + footer(1);
 }
 
 // ----------------------------------------------------------- sitemap
+// llms.txt is a proposed convention (llmstxt.org) for giving language models a
+// plain-text index of a site. Adoption is not universal and no major AI vendor
+// has committed to reading it, but it costs nothing and it regenerates here so
+// it cannot drift out of sync with the posts.
+function writeLlmsTxt(posts) {
+  const lines = [
+    '# RizeUp Global',
+    '',
+    '> Study-abroad consultancy for Bangladeshi students, based in Chattogram with an office in Shah Alam, Malaysia. Guides on university applications, student visas, scholarships and funding, written by practising counsellors.',
+    '',
+    'All guidance below is written for students applying from Bangladesh. Figures quoted in articles are taken from official government sources and dated in the text; they change, so treat the article date as the currency of the numbers.',
+    '',
+    '## Guides',
+    '',
+  ];
+  posts.forEach((post) => {
+    const desc = (post.excerpt || '').replace(/\s+/g, ' ').trim();
+    lines.push(`- [${post.title}](${SITE}/blog/${post.slug})${desc ? `: ${desc}` : ''}`);
+  });
+  lines.push('', '## Destinations', '');
+  [['Malaysia', 'malaysia'], ['Australia', 'australia'], ['USA', 'usa'], ['Europe', 'europe']]
+    .forEach(([name, slug]) => lines.push(`- [Study in ${name} from Bangladesh](${SITE}/${slug})`));
+  lines.push('', '## Other', '');
+  lines.push(`- [Free study-abroad resources and guides](${SITE}/resources)`);
+  lines.push(`- [Frequently asked questions](${SITE}/faq)`);
+  lines.push(`- [Contact and free consultation](${SITE}/#contact)`);
+  lines.push('');
+  fs.writeFileSync(path.join(ROOT, 'llms.txt'), lines.join('\n'));
+}
+
 function writeSitemap(posts) {
   const today = new Date().toISOString().slice(0, 10);
   const staticUrls = [
@@ -455,7 +485,8 @@ async function main() {
   }
 
   writeSitemap(posts);
-  console.log(`Built ${posts.length} post(s)${PREVIEW ? ' (PREVIEW, incl. drafts)' : ''} + blog index + sitemap.`);
+  writeLlmsTxt(posts);
+  console.log(`Built ${posts.length} post(s)${PREVIEW ? ' (PREVIEW, incl. drafts)' : ''} + blog index + sitemap + llms.txt.`);
   posts.forEach((p) => console.log(`  - blog/${p.slug}.html  «${p.title}»`));
 }
 
