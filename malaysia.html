@@ -47,6 +47,125 @@
   ]
 }
 </script>
+<!--unis-jsonld-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Universities in Malaysia for Bangladeshi students",
+  "description": "Malaysia is where most of our students start. World-ranked universities, tuition from around $3,500/yr, and living costs close to Dhaka. Many programs accept MOI letters instead of IELTS.",
+  "url": "https://rizeupglobal.com/malaysia",
+  "numberOfItems": 8,
+  "itemListOrder": "https://schema.org/ItemListUnordered",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "CollegeOrUniversity",
+        "name": "Universiti Malaya (UM)",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kuala Lumpur"
+        },
+        "description": "Universiti Malaya (UM) in Kuala Lumpur, QS World #60. Courses RizeUp Global places Bangladeshi students into: Computer Science, Engineering, Medicine, Business, Law. Entry requirements: HSC / A-Level with strong GPA; IELTS 6.0+ (or accepted MOI letter); Statement of purpose."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "CollegeOrUniversity",
+        "name": "Universiti Putra Malaysia (UPM)",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Serdang, Selangor"
+        },
+        "description": "Universiti Putra Malaysia (UPM) in Serdang, Selangor, QS World #148. Courses RizeUp Global places Bangladeshi students into: Agriculture & Food, Engineering, Business, Computer Science, Veterinary. Entry requirements: HSC / A-Level, min GPA ~3.0; IELTS 6.0+ or MOI; Program-specific prerequisites."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "CollegeOrUniversity",
+        "name": "Universiti Kebangsaan Malaysia (UKM)",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bangi, Selangor"
+        },
+        "description": "Universiti Kebangsaan Malaysia (UKM) in Bangi, Selangor, QS World #138. Courses RizeUp Global places Bangladeshi students into: Medicine, Engineering, Social Sciences, Business, IT. Entry requirements: HSC / A-Level with good grades; IELTS 6.0+ or MOI; Statement of purpose."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "CollegeOrUniversity",
+        "name": "Universiti Sains Malaysia (USM)",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Penang"
+        },
+        "description": "Universiti Sains Malaysia (USM) in Penang, QS World #146. Courses RizeUp Global places Bangladeshi students into: Pharmacy, Engineering, Computer Science, Sciences, Management. Entry requirements: HSC / A-Level, min GPA ~3.0; IELTS 6.0+ or MOI; Relevant science background for STEM."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "CollegeOrUniversity",
+        "name": "Universiti Teknologi Malaysia (UTM)",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Johor Bahru / KL"
+        },
+        "description": "Universiti Teknologi Malaysia (UTM) in Johor Bahru / KL, QS World #181. Courses RizeUp Global places Bangladeshi students into: Engineering, Architecture, Computer Science, Built Environment, Business. Entry requirements: HSC / A-Level with STEM subjects; IELTS 6.0+ or MOI; Portfolio for design programs."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "CollegeOrUniversity",
+        "name": "Taylor's University",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Subang Jaya, Selangor"
+        },
+        "description": "Taylor's University in Subang Jaya, Selangor, QS World #253 (Top private). Courses RizeUp Global places Bangladeshi students into: Hospitality, Business, Design, Computer Science, Biosciences. Entry requirements: HSC / A-Level or foundation; IELTS 6.0+ (some 5.5 with prep); Portfolio for creative programs."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "CollegeOrUniversity",
+        "name": "Monash University Malaysia",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bandar Sunway, Selangor"
+        },
+        "description": "Monash University Malaysia in Bandar Sunway, Selangor, Australian degree in Malaysia. Courses RizeUp Global places Bangladeshi students into: Business, Engineering, IT, Pharmacy, Psychology. Entry requirements: HSC / A-Level, competitive GPA; IELTS 6.5 (no band < 6.0); Statement of purpose."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "item": {
+        "@type": "CollegeOrUniversity",
+        "name": "Asia Pacific University (APU)",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kuala Lumpur"
+        },
+        "description": "Asia Pacific University (APU) in Kuala Lumpur, Top IT & tech private. Courses RizeUp Global places Bangladeshi students into: Computer Science, Cybersecurity, Data Science, Business IT, Games Development. Entry requirements: HSC / A-Level or foundation; IELTS 5.5-6.0 or MOI; Basic maths for tech programs."
+      }
+    }
+  ]
+}
+</script>
+<!--/unis-jsonld-->
 </head>
 <body>
 
@@ -54,7 +173,7 @@
 <nav class="navbar">
   <div class="navbar__inner">
     <a href="index.html#top" class="navbar__logo">
-      <img src="navbar-logo.png" alt="" class="navbar__logo-img">
+      <img src="navbar-logo.png" alt="" class="navbar__logo-img" width="120" height="120">
       RizeUp<em>Global</em>
     </a>
     <div class="navbar__links" id="nav-links">
@@ -72,13 +191,28 @@
 </nav>
 
 <!-- HERO (rendered by JS) -->
-<header id="dhero" class="dhero">
-  <div class="dhero__inner">
-    <a href="index.html#destinations" class="dhero__back">← All destinations</a>
-    <h1 class="dhero__title">Study in <em>Malaysia</em></h1>
-    <p class="dhero__tagline">Affordable, English-taught, close to home.</p>
-    <p class="dhero__intro">Malaysia is where most of our students start. World-ranked universities, tuition from around $3,500/yr, and living costs close to Dhaka. Many programs accept MOI letters instead of IELTS.</p>
-  </div>
+<header id="dhero" class="dhero" data-prerendered="1">
+    <div class="dhero__inner">
+      <a href="index.html#destinations" class="dhero__back">← All destinations</a>
+      <div class="dhero__flag" role="img" aria-label="Malaysia flag">🇲🇾</div>
+      <h1 class="dhero__title">Study in <em>Malaysia</em></h1>
+      <p class="dhero__tagline">Affordable, English-taught, close to home.</p>
+      <p class="dhero__intro">Malaysia is where most of our students start. World-ranked universities, tuition from around $3,500/yr, and living costs close to Dhaka. Many programs accept MOI letters instead of IELTS.</p>
+      <div class="dhero__stats">
+      <div class="dhero__stat">
+        <div class="dhero__stat-num">20+</div>
+        <div class="dhero__stat-label">Universities we place into</div>
+      </div>
+      <div class="dhero__stat">
+        <div class="dhero__stat-num">~$3,500/yr</div>
+        <div class="dhero__stat-label">Tuition from</div>
+      </div>
+      <div class="dhero__stat">
+        <div class="dhero__stat-num">2-3 mo</div>
+        <div class="dhero__stat-label">Fastest consult-to-flight</div>
+      </div>
+      </div>
+    </div>
 </header>
 
 <!-- UNIVERSITIES -->
@@ -87,7 +221,160 @@
     <h2>Universities We <em>Place Into</em></h2>
     <p>A shortlist of strong, well-ranked universities. Book a free consult below and a counselor will build the right shortlist for your grades and budget.</p>
   </div>
-  <div id="uni-grid" class="uni-grid"></div>
+  <div id="uni-grid" class="uni-grid" data-prerendered="1">
+      <article class="uni-card uni-card--t-purple">
+        <div class="uni-card__media">
+          <img src="images/universities/universiti-malaya.jpg" alt="Universiti Malaya (UM)" class="uni-card__img" width="640" height="420" loading="lazy" decoding="async">
+          <span class="uni-card__rank">QS World #60</span>
+        </div>
+        <div class="uni-card__body">
+          <h3 class="uni-card__name">Universiti Malaya (UM)</h3>
+          <div class="uni-card__loc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 19 15.5 19 10C19 6.1 15.9 3 12 3C8.1 3 5 6.1 5 10C5 15.5 12 21 12 21Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            Kuala Lumpur
+          </div>
+
+          <div class="uni-card__section-label">Available courses</div>
+          <div class="uni-card__tags"><span class="uni-tag">Computer Science</span><span class="uni-tag">Engineering</span><span class="uni-tag">Medicine</span><span class="uni-tag">Business</span><span class="uni-tag">Law</span></div>
+
+          <div class="uni-card__section-label">What you need to apply</div>
+          <ul class="uni-card__reqs"><li>HSC / A-Level with strong GPA</li><li>IELTS 6.0+ (or accepted MOI letter)</li><li>Statement of purpose</li></ul>
+        </div>
+      </article>
+      <article class="uni-card uni-card--t-green">
+        <div class="uni-card__media">
+          <img src="images/universities/universiti-putra-malaysia.jpg" alt="Universiti Putra Malaysia (UPM)" class="uni-card__img" width="640" height="420" loading="lazy" decoding="async">
+          <span class="uni-card__rank">QS World #148</span>
+        </div>
+        <div class="uni-card__body">
+          <h3 class="uni-card__name">Universiti Putra Malaysia (UPM)</h3>
+          <div class="uni-card__loc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 19 15.5 19 10C19 6.1 15.9 3 12 3C8.1 3 5 6.1 5 10C5 15.5 12 21 12 21Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            Serdang, Selangor
+          </div>
+
+          <div class="uni-card__section-label">Available courses</div>
+          <div class="uni-card__tags"><span class="uni-tag">Agriculture &amp; Food</span><span class="uni-tag">Engineering</span><span class="uni-tag">Business</span><span class="uni-tag">Computer Science</span><span class="uni-tag">Veterinary</span></div>
+
+          <div class="uni-card__section-label">What you need to apply</div>
+          <ul class="uni-card__reqs"><li>HSC / A-Level, min GPA ~3.0</li><li>IELTS 6.0+ or MOI</li><li>Program-specific prerequisites</li></ul>
+        </div>
+      </article>
+      <article class="uni-card uni-card--t-pink">
+        <div class="uni-card__media">
+          <img src="images/universities/universiti-kebangsaan-malaysia.jpg" alt="Universiti Kebangsaan Malaysia (UKM)" class="uni-card__img" width="640" height="420" loading="lazy" decoding="async">
+          <span class="uni-card__rank">QS World #138</span>
+        </div>
+        <div class="uni-card__body">
+          <h3 class="uni-card__name">Universiti Kebangsaan Malaysia (UKM)</h3>
+          <div class="uni-card__loc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 19 15.5 19 10C19 6.1 15.9 3 12 3C8.1 3 5 6.1 5 10C5 15.5 12 21 12 21Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            Bangi, Selangor
+          </div>
+
+          <div class="uni-card__section-label">Available courses</div>
+          <div class="uni-card__tags"><span class="uni-tag">Medicine</span><span class="uni-tag">Engineering</span><span class="uni-tag">Social Sciences</span><span class="uni-tag">Business</span><span class="uni-tag">IT</span></div>
+
+          <div class="uni-card__section-label">What you need to apply</div>
+          <ul class="uni-card__reqs"><li>HSC / A-Level with good grades</li><li>IELTS 6.0+ or MOI</li><li>Statement of purpose</li></ul>
+        </div>
+      </article>
+      <article class="uni-card uni-card--t-blue">
+        <div class="uni-card__media">
+          <img src="images/universities/universiti-sains-malaysia.jpg" alt="Universiti Sains Malaysia (USM)" class="uni-card__img" width="640" height="420" loading="lazy" decoding="async">
+          <span class="uni-card__rank">QS World #146</span>
+        </div>
+        <div class="uni-card__body">
+          <h3 class="uni-card__name">Universiti Sains Malaysia (USM)</h3>
+          <div class="uni-card__loc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 19 15.5 19 10C19 6.1 15.9 3 12 3C8.1 3 5 6.1 5 10C5 15.5 12 21 12 21Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            Penang
+          </div>
+
+          <div class="uni-card__section-label">Available courses</div>
+          <div class="uni-card__tags"><span class="uni-tag">Pharmacy</span><span class="uni-tag">Engineering</span><span class="uni-tag">Computer Science</span><span class="uni-tag">Sciences</span><span class="uni-tag">Management</span></div>
+
+          <div class="uni-card__section-label">What you need to apply</div>
+          <ul class="uni-card__reqs"><li>HSC / A-Level, min GPA ~3.0</li><li>IELTS 6.0+ or MOI</li><li>Relevant science background for STEM</li></ul>
+        </div>
+      </article>
+      <article class="uni-card uni-card--t-purple">
+        <div class="uni-card__media">
+          <img src="images/universities/universiti-teknologi-malaysia.jpg" alt="Universiti Teknologi Malaysia (UTM)" class="uni-card__img" width="640" height="420" loading="lazy" decoding="async">
+          <span class="uni-card__rank">QS World #181</span>
+        </div>
+        <div class="uni-card__body">
+          <h3 class="uni-card__name">Universiti Teknologi Malaysia (UTM)</h3>
+          <div class="uni-card__loc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 19 15.5 19 10C19 6.1 15.9 3 12 3C8.1 3 5 6.1 5 10C5 15.5 12 21 12 21Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            Johor Bahru / KL
+          </div>
+
+          <div class="uni-card__section-label">Available courses</div>
+          <div class="uni-card__tags"><span class="uni-tag">Engineering</span><span class="uni-tag">Architecture</span><span class="uni-tag">Computer Science</span><span class="uni-tag">Built Environment</span><span class="uni-tag">Business</span></div>
+
+          <div class="uni-card__section-label">What you need to apply</div>
+          <ul class="uni-card__reqs"><li>HSC / A-Level with STEM subjects</li><li>IELTS 6.0+ or MOI</li><li>Portfolio for design programs</li></ul>
+        </div>
+      </article>
+      <article class="uni-card uni-card--t-green">
+        <div class="uni-card__media">
+          <img src="images/universities/taylors-university.jpg" alt="Taylor&#39;s University" class="uni-card__img" width="640" height="420" loading="lazy" decoding="async">
+          <span class="uni-card__rank">QS World #253 (Top private)</span>
+        </div>
+        <div class="uni-card__body">
+          <h3 class="uni-card__name">Taylor&#39;s University</h3>
+          <div class="uni-card__loc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 19 15.5 19 10C19 6.1 15.9 3 12 3C8.1 3 5 6.1 5 10C5 15.5 12 21 12 21Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            Subang Jaya, Selangor
+          </div>
+
+          <div class="uni-card__section-label">Available courses</div>
+          <div class="uni-card__tags"><span class="uni-tag">Hospitality</span><span class="uni-tag">Business</span><span class="uni-tag">Design</span><span class="uni-tag">Computer Science</span><span class="uni-tag">Biosciences</span></div>
+
+          <div class="uni-card__section-label">What you need to apply</div>
+          <ul class="uni-card__reqs"><li>HSC / A-Level or foundation</li><li>IELTS 6.0+ (some 5.5 with prep)</li><li>Portfolio for creative programs</li></ul>
+        </div>
+      </article>
+      <article class="uni-card uni-card--t-pink">
+        <div class="uni-card__media">
+          <img src="images/universities/monash-university-malaysia.jpg" alt="Monash University Malaysia" class="uni-card__img" width="640" height="420" loading="lazy" decoding="async">
+          <span class="uni-card__rank">Australian degree in Malaysia</span>
+        </div>
+        <div class="uni-card__body">
+          <h3 class="uni-card__name">Monash University Malaysia</h3>
+          <div class="uni-card__loc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 19 15.5 19 10C19 6.1 15.9 3 12 3C8.1 3 5 6.1 5 10C5 15.5 12 21 12 21Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            Bandar Sunway, Selangor
+          </div>
+
+          <div class="uni-card__section-label">Available courses</div>
+          <div class="uni-card__tags"><span class="uni-tag">Business</span><span class="uni-tag">Engineering</span><span class="uni-tag">IT</span><span class="uni-tag">Pharmacy</span><span class="uni-tag">Psychology</span></div>
+
+          <div class="uni-card__section-label">What you need to apply</div>
+          <ul class="uni-card__reqs"><li>HSC / A-Level, competitive GPA</li><li>IELTS 6.5 (no band &lt; 6.0)</li><li>Statement of purpose</li></ul>
+        </div>
+      </article>
+      <article class="uni-card uni-card--t-blue">
+        <div class="uni-card__media">
+          <img src="images/universities/asia-pacific-university.jpg" alt="Asia Pacific University (APU)" class="uni-card__img" width="640" height="420" loading="lazy" decoding="async">
+          <span class="uni-card__rank">Top IT &amp; tech private</span>
+        </div>
+        <div class="uni-card__body">
+          <h3 class="uni-card__name">Asia Pacific University (APU)</h3>
+          <div class="uni-card__loc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 19 15.5 19 10C19 6.1 15.9 3 12 3C8.1 3 5 6.1 5 10C5 15.5 12 21 12 21Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            Kuala Lumpur
+          </div>
+
+          <div class="uni-card__section-label">Available courses</div>
+          <div class="uni-card__tags"><span class="uni-tag">Computer Science</span><span class="uni-tag">Cybersecurity</span><span class="uni-tag">Data Science</span><span class="uni-tag">Business IT</span><span class="uni-tag">Games Development</span></div>
+
+          <div class="uni-card__section-label">What you need to apply</div>
+          <ul class="uni-card__reqs"><li>HSC / A-Level or foundation</li><li>IELTS 5.5-6.0 or MOI</li><li>Basic maths for tech programs</li></ul>
+        </div>
+      </article>
+  <!--/uni-grid--></div>
 </section>
 
 <div class="uni-disclaimer reveal">

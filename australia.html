@@ -47,6 +47,99 @@
   ]
 }
 </script>
+<!--unis-jsonld-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Universities in Australia for Bangladeshi students",
+  "description": "Australia pairs top-40 universities with generous post-study work visas. Plan for 6-9 months including visa, and a tuition budget from around $22,000/yr. Strong grades and IELTS matter here.",
+  "url": "https://rizeupglobal.com/australia",
+  "numberOfItems": 6,
+  "itemListOrder": "https://schema.org/ItemListUnordered",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Melbourne",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Melbourne, VIC"
+        },
+        "description": "University of Melbourne in Melbourne, VIC, QS World #13. Courses RizeUp Global places Bangladeshi students into: Business, Engineering, Computer Science, Medicine, Law. Entry requirements: HSC + strong academic record; IELTS 6.5 (no band < 6.0); SOP; some programs need prerequisites."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Sydney",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Sydney, NSW"
+        },
+        "description": "University of Sydney in Sydney, NSW, QS World #18. Courses RizeUp Global places Bangladeshi students into: Engineering, Business, IT, Architecture, Health Sciences. Entry requirements: HSC with competitive grades; IELTS 6.5-7.0; Portfolio for design; SOP."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "CollegeOrUniversity",
+        "name": "UNSW Sydney",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Sydney, NSW"
+        },
+        "description": "UNSW Sydney in Sydney, NSW, QS World #19. Courses RizeUp Global places Bangladeshi students into: Engineering, Computer Science, Business, Data Science, Design. Entry requirements: HSC / foundation year; IELTS 6.5 (no band < 6.0); Maths prerequisites for STEM."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "CollegeOrUniversity",
+        "name": "Australian National University (ANU)",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Canberra, ACT"
+        },
+        "description": "Australian National University (ANU) in Canberra, ACT, QS World #30. Courses RizeUp Global places Bangladeshi students into: Computing, International Relations, Sciences, Business, Engineering. Entry requirements: HSC with strong grades; IELTS 6.5; Statement of purpose."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "CollegeOrUniversity",
+        "name": "Monash University",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Melbourne, VIC"
+        },
+        "description": "Monash University in Melbourne, VIC, QS World #37. Courses RizeUp Global places Bangladeshi students into: Business, Pharmacy, Engineering, IT, Medicine. Entry requirements: HSC / diploma or foundation; IELTS 6.5 (no band < 6.0); Program prerequisites."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Queensland (UQ)",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Brisbane, QLD"
+        },
+        "description": "University of Queensland (UQ) in Brisbane, QLD, QS World #40. Courses RizeUp Global places Bangladeshi students into: Engineering, Business, Agriculture, Sciences, IT. Entry requirements: HSC with good results; IELTS 6.5; SOP; some scholarships available."
+      }
+    }
+  ]
+}
+</script>
+<!--/unis-jsonld-->
 </head>
 <body>
 
@@ -54,7 +147,7 @@
 <nav class="navbar">
   <div class="navbar__inner">
     <a href="index.html#top" class="navbar__logo">
-      <img src="navbar-logo.png" alt="" class="navbar__logo-img">
+      <img src="navbar-logo.png" alt="" class="navbar__logo-img" width="120" height="120">
       RizeUp<em>Global</em>
     </a>
     <div class="navbar__links" id="nav-links">
@@ -72,13 +165,28 @@
 </nav>
 
 <!-- HERO (rendered by JS) -->
-<header id="dhero" class="dhero">
-  <div class="dhero__inner">
-    <a href="index.html#destinations" class="dhero__back">← All destinations</a>
-    <h1 class="dhero__title">Study in <em>Australia</em></h1>
-    <p class="dhero__tagline">Global rankings, strong post-study work rights.</p>
-    <p class="dhero__intro">Australia pairs top-40 universities with generous post-study work visas. Plan for 6-9 months including visa, and a tuition budget from around $22,000/yr. Strong grades and IELTS matter here.</p>
-  </div>
+<header id="dhero" class="dhero" data-prerendered="1">
+    <div class="dhero__inner">
+      <a href="index.html#destinations" class="dhero__back">← All destinations</a>
+      <div class="dhero__flag" role="img" aria-label="Australia flag">🇦🇺</div>
+      <h1 class="dhero__title">Study in <em>Australia</em></h1>
+      <p class="dhero__tagline">Global rankings, strong post-study work rights.</p>
+      <p class="dhero__intro">Australia pairs top-40 universities with generous post-study work visas. Plan for 6-9 months including visa, and a tuition budget from around $22,000/yr. Strong grades and IELTS matter here.</p>
+      <div class="dhero__stats">
+      <div class="dhero__stat">
+        <div class="dhero__stat-num">40+</div>
+        <div class="dhero__stat-label">Universities we work with</div>
+      </div>
+      <div class="dhero__stat">
+        <div class="dhero__stat-num">~$22,000/yr</div>
+        <div class="dhero__stat-label">Tuition from</div>
+      </div>
+      <div class="dhero__stat">
+        <div class="dhero__stat-num">6-9 mo</div>
+        <div class="dhero__stat-label">Typical timeline</div>
+      </div>
+      </div>
+    </div>
 </header>
 
 <!-- UNIVERSITIES -->
@@ -87,7 +195,122 @@
     <h2>Universities We <em>Place Into</em></h2>
     <p>A shortlist of strong, well-ranked universities. Book a free consult below and a counselor will build the right shortlist for your grades and budget.</p>
   </div>
-  <div id="uni-grid" class="uni-grid"></div>
+  <div id="uni-grid" class="uni-grid" data-prerendered="1">
+      <article class="uni-card uni-card--t-purple">
+        <div class="uni-card__media">
+          <img src="images/universities/university-of-melbourne.jpg" alt="University of Melbourne" class="uni-card__img" width="640" height="420" loading="lazy" decoding="async">
+          <span class="uni-card__rank">QS World #13</span>
+        </div>
+        <div class="uni-card__body">
+          <h3 class="uni-card__name">University of Melbourne</h3>
+          <div class="uni-card__loc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 19 15.5 19 10C19 6.1 15.9 3 12 3C8.1 3 5 6.1 5 10C5 15.5 12 21 12 21Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            Melbourne, VIC
+          </div>
+
+          <div class="uni-card__section-label">Available courses</div>
+          <div class="uni-card__tags"><span class="uni-tag">Business</span><span class="uni-tag">Engineering</span><span class="uni-tag">Computer Science</span><span class="uni-tag">Medicine</span><span class="uni-tag">Law</span></div>
+
+          <div class="uni-card__section-label">What you need to apply</div>
+          <ul class="uni-card__reqs"><li>HSC + strong academic record</li><li>IELTS 6.5 (no band &lt; 6.0)</li><li>SOP; some programs need prerequisites</li></ul>
+        </div>
+      </article>
+      <article class="uni-card uni-card--t-green">
+        <div class="uni-card__media">
+          <img src="images/universities/university-of-sydney.jpg" alt="University of Sydney" class="uni-card__img" width="640" height="420" loading="lazy" decoding="async">
+          <span class="uni-card__rank">QS World #18</span>
+        </div>
+        <div class="uni-card__body">
+          <h3 class="uni-card__name">University of Sydney</h3>
+          <div class="uni-card__loc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 19 15.5 19 10C19 6.1 15.9 3 12 3C8.1 3 5 6.1 5 10C5 15.5 12 21 12 21Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            Sydney, NSW
+          </div>
+
+          <div class="uni-card__section-label">Available courses</div>
+          <div class="uni-card__tags"><span class="uni-tag">Engineering</span><span class="uni-tag">Business</span><span class="uni-tag">IT</span><span class="uni-tag">Architecture</span><span class="uni-tag">Health Sciences</span></div>
+
+          <div class="uni-card__section-label">What you need to apply</div>
+          <ul class="uni-card__reqs"><li>HSC with competitive grades</li><li>IELTS 6.5-7.0</li><li>Portfolio for design; SOP</li></ul>
+        </div>
+      </article>
+      <article class="uni-card uni-card--t-pink">
+        <div class="uni-card__media">
+          <img src="images/universities/unsw-sydney.jpg" alt="UNSW Sydney" class="uni-card__img" width="640" height="420" loading="lazy" decoding="async">
+          <span class="uni-card__rank">QS World #19</span>
+        </div>
+        <div class="uni-card__body">
+          <h3 class="uni-card__name">UNSW Sydney</h3>
+          <div class="uni-card__loc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 19 15.5 19 10C19 6.1 15.9 3 12 3C8.1 3 5 6.1 5 10C5 15.5 12 21 12 21Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            Sydney, NSW
+          </div>
+
+          <div class="uni-card__section-label">Available courses</div>
+          <div class="uni-card__tags"><span class="uni-tag">Engineering</span><span class="uni-tag">Computer Science</span><span class="uni-tag">Business</span><span class="uni-tag">Data Science</span><span class="uni-tag">Design</span></div>
+
+          <div class="uni-card__section-label">What you need to apply</div>
+          <ul class="uni-card__reqs"><li>HSC / foundation year</li><li>IELTS 6.5 (no band &lt; 6.0)</li><li>Maths prerequisites for STEM</li></ul>
+        </div>
+      </article>
+      <article class="uni-card uni-card--t-blue">
+        <div class="uni-card__media">
+          <img src="images/universities/australian-national-university.jpg" alt="Australian National University (ANU)" class="uni-card__img" width="640" height="420" loading="lazy" decoding="async">
+          <span class="uni-card__rank">QS World #30</span>
+        </div>
+        <div class="uni-card__body">
+          <h3 class="uni-card__name">Australian National University (ANU)</h3>
+          <div class="uni-card__loc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 19 15.5 19 10C19 6.1 15.9 3 12 3C8.1 3 5 6.1 5 10C5 15.5 12 21 12 21Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            Canberra, ACT
+          </div>
+
+          <div class="uni-card__section-label">Available courses</div>
+          <div class="uni-card__tags"><span class="uni-tag">Computing</span><span class="uni-tag">International Relations</span><span class="uni-tag">Sciences</span><span class="uni-tag">Business</span><span class="uni-tag">Engineering</span></div>
+
+          <div class="uni-card__section-label">What you need to apply</div>
+          <ul class="uni-card__reqs"><li>HSC with strong grades</li><li>IELTS 6.5</li><li>Statement of purpose</li></ul>
+        </div>
+      </article>
+      <article class="uni-card uni-card--t-purple">
+        <div class="uni-card__media">
+          <img src="images/universities/monash-university.jpg" alt="Monash University" class="uni-card__img" width="640" height="420" loading="lazy" decoding="async">
+          <span class="uni-card__rank">QS World #37</span>
+        </div>
+        <div class="uni-card__body">
+          <h3 class="uni-card__name">Monash University</h3>
+          <div class="uni-card__loc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 19 15.5 19 10C19 6.1 15.9 3 12 3C8.1 3 5 6.1 5 10C5 15.5 12 21 12 21Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            Melbourne, VIC
+          </div>
+
+          <div class="uni-card__section-label">Available courses</div>
+          <div class="uni-card__tags"><span class="uni-tag">Business</span><span class="uni-tag">Pharmacy</span><span class="uni-tag">Engineering</span><span class="uni-tag">IT</span><span class="uni-tag">Medicine</span></div>
+
+          <div class="uni-card__section-label">What you need to apply</div>
+          <ul class="uni-card__reqs"><li>HSC / diploma or foundation</li><li>IELTS 6.5 (no band &lt; 6.0)</li><li>Program prerequisites</li></ul>
+        </div>
+      </article>
+      <article class="uni-card uni-card--t-green">
+        <div class="uni-card__media">
+          <img src="images/universities/university-of-queensland.jpg" alt="University of Queensland (UQ)" class="uni-card__img" width="640" height="420" loading="lazy" decoding="async">
+          <span class="uni-card__rank">QS World #40</span>
+        </div>
+        <div class="uni-card__body">
+          <h3 class="uni-card__name">University of Queensland (UQ)</h3>
+          <div class="uni-card__loc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 19 15.5 19 10C19 6.1 15.9 3 12 3C8.1 3 5 6.1 5 10C5 15.5 12 21 12 21Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            Brisbane, QLD
+          </div>
+
+          <div class="uni-card__section-label">Available courses</div>
+          <div class="uni-card__tags"><span class="uni-tag">Engineering</span><span class="uni-tag">Business</span><span class="uni-tag">Agriculture</span><span class="uni-tag">Sciences</span><span class="uni-tag">IT</span></div>
+
+          <div class="uni-card__section-label">What you need to apply</div>
+          <ul class="uni-card__reqs"><li>HSC with good results</li><li>IELTS 6.5</li><li>SOP; some scholarships available</li></ul>
+        </div>
+      </article>
+  <!--/uni-grid--></div>
 </section>
 
 <div class="uni-disclaimer reveal">

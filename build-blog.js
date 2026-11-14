@@ -167,7 +167,7 @@ function navbar(depth) {
 <nav class="navbar">
   <div class="navbar__inner">
     <a href="${p}index.html#top" class="navbar__logo">
-      <img src="${p}navbar-logo.png" alt="" class="navbar__logo-img">
+      <img src="${p}navbar-logo.png" alt="" class="navbar__logo-img" width="120" height="120">
       RizeUp<em>Global</em>
     </a>
     <div class="navbar__links" id="nav-links">

@@ -47,6 +47,99 @@
   ]
 }
 </script>
+<!--unis-jsonld-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Universities in Europe for Bangladeshi students",
+  "description": "Europe spans the UK, Germany, Italy, France and more. Germany and Italy offer very low (sometimes free) public tuition; the UK offers fast one-year master's. Requirements vary by country, we map the right fit to your budget and profile.",
+  "url": "https://rizeupglobal.com/europe",
+  "numberOfItems": 6,
+  "itemListOrder": "https://schema.org/ItemListUnordered",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "CollegeOrUniversity",
+        "name": "Imperial College London",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "London, United Kingdom"
+        },
+        "description": "Imperial College London in London, United Kingdom, QS World #2. Courses RizeUp Global places Bangladeshi students into: Engineering, Computing, Medicine, Business, Natural Sciences. Entry requirements: HSC / A-Level with top grades; IELTS 6.5-7.0; SOP; strong maths for STEM."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Oxford",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Oxford, United Kingdom"
+        },
+        "description": "University of Oxford in Oxford, United Kingdom, QS World #3. Courses RizeUp Global places Bangladeshi students into: PPE, Computer Science, Engineering, Law, Medicine. Entry requirements: Exceptional academic record; IELTS 7.0-7.5; SOP, LORs, admissions test/interview."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "CollegeOrUniversity",
+        "name": "Technical University of Munich (TUM)",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Munich, Germany"
+        },
+        "description": "Technical University of Munich (TUM) in Munich, Germany, QS World #28. Courses RizeUp Global places Bangladeshi students into: Engineering, Computer Science, Data Science, Management, Physics. Entry requirements: HSC + recognised qualification; IELTS 6.5 (or German for some); Low/no tuition; APS certificate."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Manchester",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Manchester, United Kingdom"
+        },
+        "description": "University of Manchester in Manchester, United Kingdom, QS World #34. Courses RizeUp Global places Bangladeshi students into: Business, Engineering, Computer Science, Sciences, Social Sciences. Entry requirements: HSC / A-Level, good grades; IELTS 6.5; SOP; scholarships available."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "CollegeOrUniversity",
+        "name": "Heidelberg University",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Heidelberg, Germany"
+        },
+        "description": "Heidelberg University in Heidelberg, Germany, QS World #47. Courses RizeUp Global places Bangladeshi students into: Medicine, Sciences, Humanities, Law, Economics. Entry requirements: HSC + recognised qualification; IELTS 6.5 or German; APS certificate; low/no tuition."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "CollegeOrUniversity",
+        "name": "Politecnico di Milano",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Milan, Italy"
+        },
+        "description": "Politecnico di Milano in Milan, Italy, QS World #111. Courses RizeUp Global places Bangladeshi students into: Architecture, Design, Engineering, Urban Planning, Computer Engineering. Entry requirements: HSC with STEM strength; IELTS 6.0-6.5; Portfolio for design; low public tuition."
+      }
+    }
+  ]
+}
+</script>
+<!--/unis-jsonld-->
 </head>
 <body>
 
@@ -54,7 +147,7 @@
 <nav class="navbar">
   <div class="navbar__inner">
     <a href="index.html#top" class="navbar__logo">
-      <img src="navbar-logo.png" alt="" class="navbar__logo-img">
+      <img src="navbar-logo.png" alt="" class="navbar__logo-img" width="120" height="120">
       RizeUp<em>Global</em>
     </a>
     <div class="navbar__links" id="nav-links">
@@ -72,13 +165,28 @@
 </nav>
 
 <!-- HERO (rendered by JS) -->
-<header id="dhero" class="dhero">
-  <div class="dhero__inner">
-    <a href="index.html#destinations" class="dhero__back">← All destinations</a>
-    <h1 class="dhero__title">Study in <em>Europe</em></h1>
-    <p class="dhero__tagline">Low-cost tuition and English-taught degrees.</p>
-    <p class="dhero__intro">Europe spans the UK, Germany, Italy, France and more. Germany and Italy offer very low (sometimes free) public tuition; the UK offers fast one-year master's. Requirements vary by country, we map the right fit to your budget and profile.</p>
-  </div>
+<header id="dhero" class="dhero" data-prerendered="1">
+    <div class="dhero__inner">
+      <a href="index.html#destinations" class="dhero__back">← All destinations</a>
+      <div class="dhero__flag" role="img" aria-label="Europe flag">🇪🇺</div>
+      <h1 class="dhero__title">Study in <em>Europe</em></h1>
+      <p class="dhero__tagline">Low-cost tuition and English-taught degrees.</p>
+      <p class="dhero__intro">Europe spans the UK, Germany, Italy, France and more. Germany and Italy offer very low (sometimes free) public tuition; the UK offers fast one-year master&#39;s. Requirements vary by country, we map the right fit to your budget and profile.</p>
+      <div class="dhero__stats">
+      <div class="dhero__stat">
+        <div class="dhero__stat-num">6</div>
+        <div class="dhero__stat-label">Countries: UK, Germany, Italy, France…</div>
+      </div>
+      <div class="dhero__stat">
+        <div class="dhero__stat-num">Low / free</div>
+        <div class="dhero__stat-label">Public tuition in Germany &amp; Italy</div>
+      </div>
+      <div class="dhero__stat">
+        <div class="dhero__stat-num">1 yr</div>
+        <div class="dhero__stat-label">UK master&#39;s duration</div>
+      </div>
+      </div>
+    </div>
 </header>
 
 <!-- UNIVERSITIES -->
@@ -87,7 +195,122 @@
     <h2>Universities We <em>Place Into</em></h2>
     <p>A shortlist of strong, well-ranked universities. Book a free consult below and a counselor will build the right shortlist for your grades and budget.</p>
   </div>
-  <div id="uni-grid" class="uni-grid"></div>
+  <div id="uni-grid" class="uni-grid" data-prerendered="1">
+      <article class="uni-card uni-card--t-purple">
+        <div class="uni-card__media">
+          <img src="images/universities/imperial-college-london.jpg" alt="Imperial College London" class="uni-card__img" width="640" height="420" loading="lazy" decoding="async">
+          <span class="uni-card__rank">QS World #2</span>
+        </div>
+        <div class="uni-card__body">
+          <h3 class="uni-card__name">Imperial College London</h3>
+          <div class="uni-card__loc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 19 15.5 19 10C19 6.1 15.9 3 12 3C8.1 3 5 6.1 5 10C5 15.5 12 21 12 21Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            London, United Kingdom
+          </div>
+
+          <div class="uni-card__section-label">Available courses</div>
+          <div class="uni-card__tags"><span class="uni-tag">Engineering</span><span class="uni-tag">Computing</span><span class="uni-tag">Medicine</span><span class="uni-tag">Business</span><span class="uni-tag">Natural Sciences</span></div>
+
+          <div class="uni-card__section-label">What you need to apply</div>
+          <ul class="uni-card__reqs"><li>HSC / A-Level with top grades</li><li>IELTS 6.5-7.0</li><li>SOP; strong maths for STEM</li></ul>
+        </div>
+      </article>
+      <article class="uni-card uni-card--t-green">
+        <div class="uni-card__media">
+          <img src="images/universities/university-of-oxford.jpg" alt="University of Oxford" class="uni-card__img" width="640" height="420" loading="lazy" decoding="async">
+          <span class="uni-card__rank">QS World #3</span>
+        </div>
+        <div class="uni-card__body">
+          <h3 class="uni-card__name">University of Oxford</h3>
+          <div class="uni-card__loc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 19 15.5 19 10C19 6.1 15.9 3 12 3C8.1 3 5 6.1 5 10C5 15.5 12 21 12 21Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            Oxford, United Kingdom
+          </div>
+
+          <div class="uni-card__section-label">Available courses</div>
+          <div class="uni-card__tags"><span class="uni-tag">PPE</span><span class="uni-tag">Computer Science</span><span class="uni-tag">Engineering</span><span class="uni-tag">Law</span><span class="uni-tag">Medicine</span></div>
+
+          <div class="uni-card__section-label">What you need to apply</div>
+          <ul class="uni-card__reqs"><li>Exceptional academic record</li><li>IELTS 7.0-7.5</li><li>SOP, LORs, admissions test/interview</li></ul>
+        </div>
+      </article>
+      <article class="uni-card uni-card--t-pink">
+        <div class="uni-card__media">
+          <img src="images/universities/technical-university-of-munich.jpg" alt="Technical University of Munich (TUM)" class="uni-card__img" width="640" height="420" loading="lazy" decoding="async">
+          <span class="uni-card__rank">QS World #28</span>
+        </div>
+        <div class="uni-card__body">
+          <h3 class="uni-card__name">Technical University of Munich (TUM)</h3>
+          <div class="uni-card__loc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 19 15.5 19 10C19 6.1 15.9 3 12 3C8.1 3 5 6.1 5 10C5 15.5 12 21 12 21Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            Munich, Germany
+          </div>
+
+          <div class="uni-card__section-label">Available courses</div>
+          <div class="uni-card__tags"><span class="uni-tag">Engineering</span><span class="uni-tag">Computer Science</span><span class="uni-tag">Data Science</span><span class="uni-tag">Management</span><span class="uni-tag">Physics</span></div>
+
+          <div class="uni-card__section-label">What you need to apply</div>
+          <ul class="uni-card__reqs"><li>HSC + recognised qualification</li><li>IELTS 6.5 (or German for some)</li><li>Low/no tuition; APS certificate</li></ul>
+        </div>
+      </article>
+      <article class="uni-card uni-card--t-blue">
+        <div class="uni-card__media">
+          <img src="images/universities/university-of-manchester.jpg" alt="University of Manchester" class="uni-card__img" width="640" height="420" loading="lazy" decoding="async">
+          <span class="uni-card__rank">QS World #34</span>
+        </div>
+        <div class="uni-card__body">
+          <h3 class="uni-card__name">University of Manchester</h3>
+          <div class="uni-card__loc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 19 15.5 19 10C19 6.1 15.9 3 12 3C8.1 3 5 6.1 5 10C5 15.5 12 21 12 21Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            Manchester, United Kingdom
+          </div>
+
+          <div class="uni-card__section-label">Available courses</div>
+          <div class="uni-card__tags"><span class="uni-tag">Business</span><span class="uni-tag">Engineering</span><span class="uni-tag">Computer Science</span><span class="uni-tag">Sciences</span><span class="uni-tag">Social Sciences</span></div>
+
+          <div class="uni-card__section-label">What you need to apply</div>
+          <ul class="uni-card__reqs"><li>HSC / A-Level, good grades</li><li>IELTS 6.5</li><li>SOP; scholarships available</li></ul>
+        </div>
+      </article>
+      <article class="uni-card uni-card--t-purple">
+        <div class="uni-card__media">
+          <img src="images/universities/heidelberg-university.jpg" alt="Heidelberg University" class="uni-card__img" width="640" height="420" loading="lazy" decoding="async">
+          <span class="uni-card__rank">QS World #47</span>
+        </div>
+        <div class="uni-card__body">
+          <h3 class="uni-card__name">Heidelberg University</h3>
+          <div class="uni-card__loc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 19 15.5 19 10C19 6.1 15.9 3 12 3C8.1 3 5 6.1 5 10C5 15.5 12 21 12 21Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            Heidelberg, Germany
+          </div>
+
+          <div class="uni-card__section-label">Available courses</div>
+          <div class="uni-card__tags"><span class="uni-tag">Medicine</span><span class="uni-tag">Sciences</span><span class="uni-tag">Humanities</span><span class="uni-tag">Law</span><span class="uni-tag">Economics</span></div>
+
+          <div class="uni-card__section-label">What you need to apply</div>
+          <ul class="uni-card__reqs"><li>HSC + recognised qualification</li><li>IELTS 6.5 or German</li><li>APS certificate; low/no tuition</li></ul>
+        </div>
+      </article>
+      <article class="uni-card uni-card--t-green">
+        <div class="uni-card__media">
+          <img src="images/universities/politecnico-di-milano.jpg" alt="Politecnico di Milano" class="uni-card__img" width="640" height="420" loading="lazy" decoding="async">
+          <span class="uni-card__rank">QS World #111</span>
+        </div>
+        <div class="uni-card__body">
+          <h3 class="uni-card__name">Politecnico di Milano</h3>
+          <div class="uni-card__loc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 19 15.5 19 10C19 6.1 15.9 3 12 3C8.1 3 5 6.1 5 10C5 15.5 12 21 12 21Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            Milan, Italy
+          </div>
+
+          <div class="uni-card__section-label">Available courses</div>
+          <div class="uni-card__tags"><span class="uni-tag">Architecture</span><span class="uni-tag">Design</span><span class="uni-tag">Engineering</span><span class="uni-tag">Urban Planning</span><span class="uni-tag">Computer Engineering</span></div>
+
+          <div class="uni-card__section-label">What you need to apply</div>
+          <ul class="uni-card__reqs"><li>HSC with STEM strength</li><li>IELTS 6.0-6.5</li><li>Portfolio for design; low public tuition</li></ul>
+        </div>
+      </article>
+  <!--/uni-grid--></div>
 </section>
 
 <div class="uni-disclaimer reveal">

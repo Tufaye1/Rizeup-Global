@@ -76,8 +76,16 @@ function renderPage() {
     return;
   }
   document.title = `Study in ${data.name} | RizeUp Global`;
-  document.getElementById('dhero').innerHTML = renderHero();
-  document.getElementById('uni-grid').innerHTML = data.universities.map(renderCard).join('');
+
+  // build-destinations.js bakes this markup into the HTML so crawlers that
+  // do not run JS still see it. Only render here if it was not baked in.
+  const hero = document.getElementById('dhero');
+  if (hero.dataset.prerendered !== '1') hero.innerHTML = renderHero();
+
+  const grid = document.getElementById('uni-grid');
+  if (grid.dataset.prerendered !== '1') {
+    grid.innerHTML = data.universities.map(renderCard).join('');
+  }
 
   const wa = document.querySelector('.wa-float');
   if (wa) wa.href = `https://wa.me/${WHATSAPP_NUMBER}`;
